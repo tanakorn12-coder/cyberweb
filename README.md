@@ -1,53 +1,64 @@
 # 🛡️ พักเช็ก (PakCheck) - AI Scam Guard
 
 > **พัก 10 วิ เช็กให้ชัวร์ ก่อนโอนหรือกดลิงก์**  
-> แพลตฟอร์มคุ้มครองความปลอดภัยดิจิทัลเพื่อผู้สูงวัยและครอบครัวไทย
+> แพลตฟอร์มคุ้มครองความปลอดภัยดิจิทัลเพื่อผู้สูงวัยและครอบครัวไทย (Cross-Generational Cyber Guard)
 
-## 🌐 Live Demo
+---
 
-เปิดไฟล์ `index.html` ในเบราว์เซอร์ หรือ deploy บน GitHub Pages
+## 🌐 เข้าใช้งานระบบ (Live Demo & Online Sites)
 
-## 📄 Pages
+- 📱 **ระบบจำลองหน้าจอมือถือหลายรุ่น (Multi-Device Simulator)**: [https://tanakorn12-coder.github.io/cyberweb/simulator.html](https://tanakorn12-coder.github.io/cyberweb/simulator.html)
+- 🖥️ **หน้าเว็บหลัก (Desktop Web)**: [https://tanakorn12-coder.github.io/cyberweb/](https://tanakorn12-coder.github.io/cyberweb/)
+- 💻 **GitHub Repository**: [https://github.com/tanakorn12-coder/cyberweb](https://github.com/tanakorn12-coder/cyberweb)
 
-| หน้า | ไฟล์ | คำอธิบาย |
-|------|------|----------|
-| 🏠 หน้าแรก (ตรวจด่วน) | `index.html` | ตรวจเบอร์โทร, สแกนสลิป, ตรวจลิงก์ SMS |
-| 🛡️ ตัวช่วย SAFE STEP | `safe-step.html` | แนะนำทีละขั้นตอน ตอบคำถาม 2-3 ข้อ รับคำแนะนำทันที |
-| 👨‍👩‍👧 สะกิดครอบครัว & เรดาร์ | `support-radar.html` | ส่งข้อมูลให้ลูกหลานช่วยตรวจ + เรดาร์เตือนภัยชุมชน |
-| 🚨 คู่มือกู้ชีพ ฉุกเฉิน 1441 | `emergency-guide.html` | ขั้นตอนอายัดบัญชี บันทึกหลักฐาน แจ้งความออนไลน์ |
+---
 
-## ✨ Features
+## 📱 สถาปัตยกรรม 2 ระบบ: เว็บไซต์ vs โทรศัพท์มือถือ & LINE OA (UX/UI Comparative Architecture)
 
-- 🎯 **ออกแบบเพื่อผู้สูงอายุ** — ตัวอักษรใหญ่ ปุ่มใหญ่ สี contrast สูง WCAG AAA
-- 🔊 **ฟังเสียงอ่าน** — Web Speech API อ่านเนื้อหาเป็นภาษาไทย
-- 🚦 **ระบบสัญญาณไฟ 3 สี** — เขียว (ปลอดภัย), เหลือง (ระวัง), แดง (อันตราย)
-- 🔒 **Privacy by Design** — ไม่เก็บข้อมูลส่วนบุคคล ไม่ต้องลงทะเบียน
-- 📱 **Responsive** — ใช้งานได้ทุกอุปกรณ์ Desktop, Tablet, Mobile
-- ☎️ **สายด่วน AOC 1441** — กดโทรฟรี 24 ชม. ได้ทุกหน้า
+| มิติการเปรียบเทียบ | 🖥️ หน้าจอเว็บไซต์ (Desktop Web) | 📱 โทรศัพท์มือถือ & LINE OA (Mobile Frontline) |
+| :--- | :--- | :--- |
+| **บทบาทหลัก** | **Family Command Center (ศูนย์บัญชาการข้อมูล)** | **Frontline Real-time Guard (เกราะป้องกันด่านหน้า)** |
+| **กลุ่มผู้ใช้งาน** | ลูกหลาน, ผู้ดูแลครอบครัว, หรือผู้สูงวัยที่นั่งโต๊ะตรวจละเอียด | ผู้สูงวัย คุณตา คุณยาย ขณะถือมือถือ หรือกำลังคุยสาย |
+| **พฤติกรรมการใช้งาน** | นั่งตรวจสอบข้อมูล ค้นประวัติ Blacklist กรอกฟอร์ม พิมพ์ PDF | แตะปุ่มรับสาย เผลอกดลิงก์ หรือได้รับข้อความทาง LINE |
+| **ปรัชญา UX/UI** | Multi-column, Data Tables, Comprehensive Verification | **Zero-Typing (ไม่ต้องพิมพ์)**, ปุ่มขนาดใหญ่พิเศษ 60-80px (Thumb Zone), อ่านออกเสียง |
+| **จุดเด่นเฉพาะระบบ** | บันทึกเลขเคสธนาคาร (Bank Case ID), ลิงก์แจ้งความ ตร., พิมพ์เอกสารสรุปคดี | **Active Call Banner** เตือนภัยขณะคุยสาย, **LINE Oversized Rich Menu**, AI Scan ในแชต |
 
-## 🛠️ Tech Stack
+---
 
-- **HTML5** + **Tailwind CSS** (CDN)
-- **Google Material Symbols** Icons
-- **Be Vietnam Pro** Font
-- **Web Speech API** สำหรับ Text-to-Speech ภาษาไทย
-- **Zero dependencies** — ไม่ต้อง build, ไม่ต้อง install
+## 📄 โครงสร้างไฟล์ในระบบ (System Structure)
 
-## 🚀 การใช้งาน
+### 🖥️ หน้าจอหลักเว็บไซต์ (Desktop Web Suite)
+1. `index.html` — หน้าแรก: เครื่องมือตรวจด่วน 3 ช่องทาง (เบอร์โทร, สลิป/แชต, SMS/ลิงก์) + สัญญาณไฟ 3 สี
+2. `safe-step.html` — SAFE STEP: ตัวช่วยวิเคราะห์ประเมินสถานการณ์ทีละขั้น + Do's & Don'ts
+3. `support-radar.html` — สะกิดครอบครัว: ส่งสรุปเข้า LINE ลูกหลาน (Consent-First) + เรดาร์เตือนภัยชุมชน
+4. `emergency-guide.html` — คู่มือกู้ชีพ 1441: เบอร์โทรอายัด 8 ธนาคาร, เช็กลิสต์หลักฐาน, แจ้งความ ตร. ออนไลน์
 
-```bash
-# Clone
-git clone https://github.com/YOUR_USERNAME/cyberweb.git
+### 📱 ระบบจำลองมือถือ (Device Simulator Suite)
+5. `simulator.html` — ศูนย์ควบคุมการจำลองโทรศัพท์มือถือ:
+   - เลือกรุ่น: **iPhone 16/17 Pro**, **Samsung S24 Ultra**, **มือถือโหมดผู้สูงวัย**, **iPad/Tablet**, **Responsive Frame**
+   - ควบคุม: ปรับขนาดซูม (75%, 85%, 100%, 115%), หมุนหน้าจอ (Portrait / Landscape)
+   - สลับหน้าจอสถานการณ์มือถือ & LINE ได้ 8+ หน้าจอจริง
 
-# เปิดในเบราว์เซอร์
-open index.html
-# หรือใช้ Live Server
-npx serve .
-```
+### 📲 ไฟล์หน้าจอมือถือจำลอง (`/mobile/`)
+- `mobile/home-call-banner.html` — หน้าจอหลักมือถือ + แบนเนอร์สายเข้าเตือนภัย + วิดเจ็ต AOC 1441
+- `mobile/safe-step-mobile.html` — SAFE STEP คัดกรองภัยบนมือถือ การ์ดสัมผัสขนาดใหญ่
+- `mobile/urgent-warning-mobile.html` — สัญญาณเตือนภัยสีแดง ห้ามโอนเงิน พร้อมเสียงเตือน
+- `mobile/family-call-mobile.html` — ปุ่มแตะโทรหาลูกหลานด่วน และส่งบัตรเตือนเข้า LINE
+- `mobile/line-chat-list.html` — หน้ารวมแชต LINE ปักหมุดบัญชีทางการพักเช็ก
+- `mobile/line-official-account.html` — LINE Official Account พร้อม Oversized Rich Menu ยักษ์
+- `mobile/line-ai-scan.html` — LINE AI Multimodal Scan วิเคราะห์ตราประทับ/เอกสารราชการปลอม
+- `mobile/line-flex-message.html` — การ์ดผลตรวจ Flex Message สีแดง พร้อมปุ่มส่งต่อให้ลูกหลาน
 
-## 📋 License
+---
 
-MIT License — สร้างเพื่อความปลอดภัยของคนไทยทุกคน
+## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
+
+- **Pure HTML5 / Modern CSS** (Zero-build overhead)
+- **Tailwind CSS CDN**
+- **Material Symbols Outlined** (Google Icons)
+- **Be Vietnam Pro & Kanit Fonts**
+- **Web Speech API** (Thai Text-to-Speech)
+- **GitHub Pages** สำหรับ Continuous Deployment
 
 ---
 

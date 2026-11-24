@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>PakCheck - เริ่มต้นใช้งาน</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-variant": "#d8e3fb",
+        "inverse-on-surface": "#ecf1ff",
+        "secondary-container": "#82f5c1",
+        "error": "#ba1a1a",
+        "inverse-primary": "#b6c4ff",
+        "outline-variant": "#c5c5d3",
+        "surface-dim": "#cfdaf2",
+        "tertiary-container": "#87000a",
+        "surface-bright": "#f9f9ff",
+        "on-tertiary": "#ffffff",
+        "background": "#f9f9ff",
+        "on-secondary-fixed-variant": "#005137",
+        "primary": "#00236f",
+        "surface": "#f9f9ff",
+        "outline": "#757682",
+        "on-tertiary-container": "#ff8b80",
+        "surface-container-low": "#f0f3ff",
+        "on-secondary-fixed": "#002114",
+        "on-primary-container": "#90a8ff",
+        "inverse-surface": "#263143",
+        "tertiary-fixed": "#ffdad6",
+        "primary-container": "#1e3a8a",
+        "on-surface": "#111c2d",
+        "tertiary": "#5d0004",
+        "on-tertiary-fixed-variant": "#93000b",
+        "on-error-container": "#93000a",
+        "on-surface-variant": "#444651",
+        "secondary-fixed-dim": "#68dba9",
+        "on-primary": "#ffffff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#d8e3fb",
+        "secondary-fixed": "#85f8c4",
+        "tertiary-fixed-dim": "#ffb4ab",
+        "error-container": "#ffdad6",
+        "secondary": "#006c4a",
+        "surface-tint": "#4059aa",
+        "on-error": "#ffffff",
+        "primary-fixed-dim": "#b6c4ff",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#410002",
+        "surface-container": "#e7eeff",
+        "primary-fixed": "#dce1ff",
+        "surface-container-high": "#dee8ff",
+        "on-primary-fixed": "#00164e",
+        "on-primary-fixed-variant": "#264191",
+        "on-secondary-container": "#00714e",
+        "on-background": "#111c2d"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.5rem",
+        "margin": "2.5rem",
+        "space-md": "1.25rem",
+        "space-xl": "3rem",
+        "space-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Be Vietnam Pro"],
+        "headline-lg": ["Be Vietnam Pro"],
+        "label-md": ["Be Vietnam Pro"],
+        "body-xl": ["Be Vietnam Pro"],
+        "display-hero": ["Be Vietnam Pro"],
+        "hotline-display": ["Be Vietnam Pro"],
+        "body-lg": ["Be Vietnam Pro"],
+        "headline-sm": ["Be Vietnam Pro"],
+        "label-lg": ["Be Vietnam Pro"],
+        "headline-md": ["Be Vietnam Pro"]
+      },
+      "fontSize": {
+        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "label-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+        "display-hero": ["40px", {"lineHeight": "52px", "fontWeight": "700"}],
+        "hotline-display": ["30px", {"lineHeight": "36px", "fontWeight": "800"}],
+        "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+        "headline-sm": ["22px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "label-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+        "headline-md": ["26px", {"lineHeight": "38px", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background text-on-surface antialiased min-h-screen flex flex-col pt-safe pb-safe"><main class="flex-1 flex flex-col relative w-full px-gutter bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- LINE Official Chat Navigation Bar -->
+<div class="w-full bg-surface-container shadow-sm px-4 py-3 rounded-b-xl flex items-center justify-between mb-4">
+<div class="flex items-center space-x-3">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<div>
+<div class="flex items-center space-x-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">พักเช็ก (PakCheck)</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center space-x-1 text-on-surface-variant font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>บัญชีทางการ (Official) • ป้องกันภัยไซเบอร์</span>
+</div>
+</div>
+</div>
+<a class="flex items-center space-x-1 px-3 py-2 bg-error-container text-on-error-container rounded-lg shadow-sm font-label-md text-label-md" href="tel:1441">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+<span class="font-bold">1441</span>
+</a>
+</div>
+<!-- Chat Timeline Container -->
+<div class="flex flex-col w-full space-y-4 px-1">
+<!-- User Upload Message Pill (Contextual) -->
+<div class="flex flex-col items-end w-full mb-1">
+<div class="bg-secondary-container text-on-secondary-container px-4 py-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%]">
+<p class="font-body-md text-body-md font-medium text-on-secondary-container">
+          ส่งรูปหมายเรียกตำรวจที่ได้มาในไลน์นี้ รบกวนตรวจให้หน่อยครับ
+        </p>
+</div>
+<span class="text-outline font-label-md text-label-md mt-1 mr-1">10:42 น.</span>
+</div>
+<!-- Official Bot Response Header -->
+<div class="flex items-center space-x-2 px-1">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-base">shield_with_heart</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">พักเช็ก ผู้ช่วยเตือนภัย</span>
+<span class="text-outline font-label-md text-label-md">10:42 น.</span>
+</div>
+<!-- Bold Flex Message Card Container -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden">
+<!-- Crimson Red Alert Banner -->
+<div class="bg-tertiary-container px-5 py-4 flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-on-tertiary flex items-center justify-center shrink-0 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-tertiary text-2xl font-bold" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1">
+<div class="text-on-tertiary font-headline-sm text-headline-sm font-bold leading-tight">
+            ผลตรวจความเสี่ยง: สัญญาณไฟสีแดง
+          </div>
+<div class="text-on-tertiary-container font-label-md text-label-md font-medium mt-0.5">
+            (ตรวจพบเป็นอันตรายสูงสุด ระดับความเสี่ยง 100%)
+          </div>
+</div>
+</div>
+<!-- Traffic Light Safety Gauge Box -->
+<div class="bg-surface-container-low p-5 flex flex-col items-center">
+<div class="bg-inverse-surface px-6 py-3 rounded-full flex items-center space-x-6 shadow-inner">
+<!-- Green Light (Inactive) -->
+<div class="flex flex-col items-center space-y-1">
+<div class="w-9 h-9 rounded-full bg-on-surface-variant/30 flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-on-surface text-xl">check</span>
+</div>
+<span class="text-inverse-on-surface font-label-md text-label-md opacity-40">ปลอดภัย</span>
+</div>
+<!-- Yellow Light (Inactive) -->
+<div class="flex flex-col items-center space-y-1">
+<div class="w-9 h-9 rounded-full bg-on-surface-variant/30 flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-on-surface text-xl">help</span>
+</div>
+<span class="text-inverse-on-surface font-label-md text-label-md opacity-40">ควรระวัง</span>
+</div>
+<!-- Red Light (Glowing Warning State) -->
+<div class="flex flex-col items-center space-y-1 relative">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-tertiary-fixed opacity-75 animate-ping"></span>
+<div class="relative w-10 h-10 rounded-full bg-error flex items-center justify-center shadow-lg shadow-error/50">
+<span class="material-symbols-outlined text-on-error text-2xl font-bold" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+</div>
+<span class="text-tertiary-fixed font-label-md text-label-md font-bold">อันตราย!</span>
+</div>
+</div>
+</div>
+<!-- Main Alert Content Details -->
+<div class="p-5 flex flex-col space-y-4">
+<!-- Giant Warning Headline -->
+<div class="bg-error-container p-4 rounded-xl text-center shadow-sm">
+<h2 class="font-headline-md text-headline-md text-on-error-container font-extrabold leading-snug">
+            เอกสารปลอม 100%!<br/>ห้ามโอนเงินเด็ดขาด
+          </h2>
+<p class="font-body-md text-body-md text-on-error-container mt-1 font-semibold">
+            สร้างขึ้นโดยแก๊งคอลเซ็นเตอร์เพื่อหลอกลวง
+          </p>
+</div>
+<!-- Evidence Visual Placeholder -->
+<div class="relative w-full h-40 rounded-xl overflow-hidden bg-surface-container-high shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Elderly-focused warning visual showing a fake official police subpoena document with a bold red diagonal stamp that reads FAKE across the center, high contrast official Thai insignia with digital fraud indicators and clean dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpKBcdD53-aS0Gp3-CjXCL0aUz1ILz8pxjcuSj0C-2MJlza7lG1ClW1OlTCX-YseNsmbjI1dBn1I0yTbrucGYnc4ZerEA7Rtlg6YSqqP9av4kh36zyDyVNacUrPrz3MN9B4_WV3jAhfVAnts5lM2ydXgRIuOocQJDVCwlzPmhN7UxDjiQFZJWIRLn7elmiUTBausFiica5aoaqaBoLsw6auSKJT4e0lLa2idpGn7KZ"/>
+<div class="absolute bottom-2 left-2 right-2 bg-inverse-surface/80 rounded-lg px-3 py-1.5 flex items-center space-x-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-base">gavel</span>
+<span class="text-inverse-on-surface font-label-md text-label-md truncate">ตรวจสอบเทียบฐานข้อมูล สอท. และตำรวจไซเบอร์</span>
+</div>
+</div>
+<!-- Explicit Safety Findings & Bullet List -->
+<div class="flex flex-col space-y-3 pt-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">
+            จุดสังเกตสำคัญที่พบ:
+          </span>
+<div class="flex items-start space-x-3 bg-surface-container-low p-3.5 rounded-xl">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+<strong class="text-error font-bold">ตรวจพบตราครุฑและรูปแบบหนังสือราชการปลอม</strong> ขนาดและฟอนต์ไม่ตรงกับสารบรรณจริง
+            </p>
+</div>
+<div class="flex items-start space-x-3 bg-surface-container-low p-3.5 rounded-xl">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+<strong class="text-on-surface font-bold">ตำรวจและหน่วยงานรัฐ ไม่มีนโยบาย</strong> ส่งหมายเรียก บัตรประจำตัว หรือขู่จับกุมผ่านทางไลน์
+            </p>
+</div>
+<div class="flex items-start space-x-3 bg-surface-container-low p-3.5 rounded-xl">
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">cancel</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-medium leading-relaxed">
+<strong class="text-error font-bold">ห้ามโอนเงินเข้า "บัญชีตรวจสอบ"</strong> เพราะเป็นบัญชีม้าของมิจฉาชีพ 100%
+            </p>
+</div>
+</div>
+<!-- Massive High-Affordance Action Buttons -->
+<div class="flex flex-col space-y-3 pt-3">
+<!-- Audio Explanation Button -->
+<a href="line-chat-list.html" class="block cursor-pointer" onclick="alert('จำลองการส่งการ์ด Flex Message เข้าห้องแชตลูกหลานสำเร็จ')"><button class="w-full bg-primary hover:bg-primary-container text-on-primary py-4 px-5 rounded-2xl shadow-md flex items-center justify-center space-x-3 active:scale-[0.98] transition-transform" id="btn-audio-guide" onclick="toggleAudioGuide()">
+<div class="w-10 h-10 rounded-full bg-on-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl text-on-primary" id="audio-icon" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold text-on-primary" id="audio-label">
+                ฟังเสียงอธิบายคำแนะนำ
+              </span>
+<span class="font-label-md text-label-md text-primary-fixed-dim" id="audio-sublabel">
+                (กดแตะเพื่อฟังคุณหมอ/เจ้าหน้าที่อ่านให้ฟัง)
+              </span>
+</div>
+</button>
+<!-- Share to Family Button -->
+<button class="w-full bg-secondary hover:bg-secondary-container text-on-secondary py-4 px-5 rounded-2xl shadow-md flex items-center justify-center space-x-3 active:scale-[0.98] transition-transform" onclick="shareWithFamily()">
+<div class="w-10 h-10 rounded-full bg-on-secondary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl text-on-secondary" style="font-variation-settings: 'FILL' 1;">share</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-lg text-label-lg font-bold text-on-secondary">
+                ส่งต่อให้ลูกหลานช่วยดู
+              </span>
+<span class="font-label-md text-label-md text-secondary-fixed">
+                (แตะส่งเข้ากลุ่มครอบครัวทันที)
+              </span>
+</div>
+</button></a>
+</div>
+<!-- Official Support Subtext Footer -->
+<div class="text-center pt-2 pb-1">
+<p class="font-label-md text-label-md text-on-surface-variant font-medium">
+            หากถูกข่มขู่หรือกดดัน โทรขอคำปรึกษาศูนย์ AOC 1441 ทันที (โทรฟรี 24 ชม.)
+          </p>
+</div>
+</div>
+</div>
+<!-- Quick Reply Chips -->
+<div class="flex overflow-x-auto space-x-2 py-2 no-scrollbar">
+<button class="shrink-0 bg-surface-container-high text-on-surface px-4 py-2.5 rounded-full font-label-md text-label-md shadow-sm" onclick="sendQuickReply('มีคนโทรมาขู่ซ้ำ')">
+        📞 มีคนโทรมาขู่ซ้ำ ทำอย่างไร?
+      </button>
+<button class="shrink-0 bg-error-container text-on-error-container px-4 py-2.5 rounded-full font-label-md text-label-md font-semibold shadow-sm" onclick="sendQuickReply('เผลอโอนเงินไปแล้ว')">
+        🚨 เผลอโอนเงินไปแล้ว แจ้งความทันไหม?
+      </button>
+<button class="shrink-0 bg-surface-container-high text-on-surface px-4 py-2.5 rounded-full font-label-md text-label-md shadow-sm" onclick="sendQuickReply('ตรวจสอบเบอร์โทร')">
+        🔎 ตรวจเบอร์โทรที่โทรเข้า
+      </button>
+</div>
+</div>
+</div>
+<script>
+  let isPlaying = false;
+  let audioTimer = null;
+
+  function toggleAudioGuide() {
+    const icon = document.getElementById('audio-icon');
+    const label = document.getElementById('audio-label');
+    const sublabel = document.getElementById('audio-sublabel');
+    const btn = document.getElementById('btn-audio-guide');
+
+    if (!isPlaying) {
+      isPlaying = true;
+      icon.innerText = 'graphic_eq';
+      label.innerText = 'กำลังเปิดเสียงอ่านให้ฟัง...';
+      sublabel.innerText = 'แตะอีกครั้งเพื่อหยุดฟัง';
+      btn.classList.add('bg-primary-container');
+      
+      // Auto reset simulation after 7 seconds
+      audioTimer = setTimeout(() => {
+        resetAudioState();
+      }, 7000);
+    } else {
+      resetAudioState();
+    }
+  }
+
+  function resetAudioState() {
+    clearTimeout(audioTimer);
+    isPlaying = false;
+    const icon = document.getElementById('audio-icon');
+    const label = document.getElementById('audio-label');
+    const sublabel = document.getElementById('audio-sublabel');
+    const btn = document.getElementById('btn-audio-guide');
+
+    if (icon) icon.innerText = 'volume_up';
+    if (label) label.innerText = 'ฟังเสียงอธิบายคำแนะนำ';
+    if (sublabel) sublabel.innerText = '(กดแตะเพื่อฟังคุณหมอ/เจ้าหน้าที่อ่านให้ฟัง)';
+    if (btn) btn.classList.remove('bg-primary-container');
+  }
+
+  function shareWithFamily() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'เตือนภัยด่วน! พักเช็กตรวจพบเอกสารปลอม',
+        text: 'เตือนภัยจากระบบพักเช็ก: ตรวจพบเอกสารหมายเรียกและบัญชีปลอม ห้ามโอนเงินเด็ดขาด ช่วยตรวจสอบด้วยครับ/ค่ะ',
+        url: window.location.href
+      }).catch(() => {});
+    } else {
+      alert('คัดลอกข้อความเตือนภัยเรียบร้อย พร้อมส่งต่อในแชตกลุ่มครอบครัวแล้ว');
+    }
+  }
+
+  function sendQuickReply(text) {
+    alert('ระบบกำลังดึงคำแนะนำสำหรับ: ' + text);
+  }
+</script></main><!-- Floating Simulator Quick Nav -->
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2.5 text-[11px] font-bold border border-white/20 select-none">
+  <a href="home-call-banner.html" class="hover:text-emerald-400 transition-colors">📞 หน้าแรก</a>
+  <span class="text-slate-600">|</span>
+  <a href="safe-step-mobile.html" class="hover:text-emerald-400 transition-colors">🛡️ SAFE STEP</a>
+  <span class="text-slate-600">|</span>
+  <a href="urgent-warning-mobile.html" class="hover:text-rose-400 transition-colors">🚨 เตือนภัย</a>
+  <span class="text-slate-600">|</span>
+  <a href="line-official-account.html" class="hover:text-emerald-400 transition-colors">💬 LINE OA</a>
+  <span class="text-slate-600">|</span>
+  <a href="../simulator.html" target="_top" class="text-amber-300 hover:text-amber-200">🖥️ ควบคุม</a>
+</div>
+</body></html>

@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>PakCheck - รายละเอียดความปลอดภัย</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#d8e3fb",
+            "inverse-on-surface": "#ecf1ff",
+            "secondary-container": "#82f5c1",
+            "error": "#ba1a1a",
+            "inverse-primary": "#b6c4ff",
+            "outline-variant": "#c5c5d3",
+            "surface-dim": "#cfdaf2",
+            "tertiary-container": "#87000a",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary": "#ffffff",
+            "background": "#f9f9ff",
+            "on-secondary-fixed-variant": "#005137",
+            "primary": "#00236f",
+            "surface": "#f9f9ff",
+            "outline": "#757682",
+            "on-tertiary-container": "#ff8b80",
+            "surface-container-low": "#f0f3ff",
+            "on-secondary-fixed": "#002114",
+            "on-primary-container": "#90a8ff",
+            "inverse-surface": "#263143",
+            "tertiary-fixed": "#ffdad6",
+            "primary-container": "#1e3a8a",
+            "on-surface": "#111c2d",
+            "tertiary": "#5d0004",
+            "on-tertiary-fixed-variant": "#93000b",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#444651",
+            "secondary-fixed-dim": "#68dba9",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#d8e3fb",
+            "secondary-fixed": "#85f8c4",
+            "tertiary-fixed-dim": "#ffb4ab",
+            "error-container": "#ffdad6",
+            "secondary": "#006c4a",
+            "surface-tint": "#4059aa",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#b6c4ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#410002",
+            "surface-container": "#e7eeff",
+            "primary-fixed": "#dce1ff",
+            "surface-container-high": "#dee8ff",
+            "on-primary-fixed": "#00164e",
+            "on-primary-fixed-variant": "#264191",
+            "on-secondary-container": "#00714e",
+            "on-background": "#111c2d"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.75rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.5rem",
+            "margin": "2.5rem",
+            "space-md": "1.25rem",
+            "space-xl": "3rem",
+            "space-lg": "2rem"
+          },
+          "fontFamily": {
+            "body-md": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "body-xl": ["Be Vietnam Pro"],
+            "display-hero": ["Be Vietnam Pro"],
+            "hotline-display": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "headline-sm": ["Be Vietnam Pro"],
+            "label-lg": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+            "label-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+            "display-hero": ["40px", {"lineHeight": "52px", "fontWeight": "700"}],
+            "hotline-display": ["30px", {"lineHeight": "36px", "fontWeight": "800"}],
+            "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+            "headline-sm": ["22px", {"lineHeight": "32px", "fontWeight": "600"}],
+            "label-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+            "headline-md": ["26px", {"lineHeight": "38px", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      body {
+        font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-neutral-900 min-h-screen flex items-center justify-center p-4 antialiased select-none">
+<!-- iPhone 17 Frame Mockup Container (393px x 852px) -->
+<div class="relative w-[393px] h-[852px] bg-black rounded-[54px] p-[10px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8),0_0_0_1px_rgba(255,255,255,0.15)] ring-1 ring-neutral-800 flex flex-col shrink-0 overflow-hidden">
+<!-- Outer Titanium Bezel Highlights -->
+<div class="absolute inset-0 rounded-[54px] pointer-events-none border border-neutral-700/40"></div>
+<!-- Screen Inner Display Area -->
+<div class="relative w-full h-full bg-background rounded-[44px] overflow-hidden flex flex-col">
+<!-- iOS 17/18 Top Status Bar -->
+<div class="absolute top-0 inset-x-0 h-12 z-50 flex items-center justify-between px-7 pt-1 pointer-events-none select-none">
+<!-- Time -->
+<span class="text-[15px] font-semibold tracking-tight text-on-surface">10:42</span>
+<!-- Dynamic Island (124px x 34px) -->
+<div class="absolute left-1/2 -translate-x-1/2 top-2.5 w-[124px] h-[34px] bg-black rounded-full flex items-center justify-between px-3 pointer-events-auto shadow-sm">
+<div class="w-2.5 h-2.5 rounded-full bg-neutral-900 border border-neutral-800"></div>
+<div class="w-3 h-3 rounded-full bg-[#0a1020] border border-[#172554] flex items-center justify-center">
+<div class="w-1 h-1 rounded-full bg-[#38bdf8]/40"></div>
+</div>
+</div>
+<!-- Status Icons: 5G, Wi-Fi, Battery -->
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="text-[12px] font-bold tracking-tight">5G</span>
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4zm0 3.25c3.71 0 7.08 1.44 9.6 3.8L12 19.35 2.4 11.05A12.98 12.98 0 0 1 12 7.25z"></path>
+</svg>
+<!-- Battery icon -->
+<div class="w-6 h-3 rounded-[4px] border border-on-surface p-[1px] flex items-center">
+<div class="h-full w-full bg-on-surface rounded-[2px]"></div>
+</div>
+</div>
+</div>
+<!-- App Header Bar -->
+<header class="sticky top-0 w-full z-40 pt-12 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-16 px-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<a href="home-call-banner.html"><button aria-label="ย้อนกลับไปหน้าที่แล้ว" class="min-w-[42px] min-h-[42px] rounded-full flex items-center justify-center text-primary bg-surface-container-low transition-colors hover:bg-surface-variant active:scale-95">
+<span class="material-symbols-outlined text-[26px]">arrow_back</span>
+</button></a>
+<h1 class="font-headline-sm text-[20px] text-on-surface font-bold truncate max-w-[170px]">Inspection Report</h1>
+</div>
+<div class="flex items-center gap-space-xs">
+<a aria-label="โทรสายด่วน AOC 1441" class="min-h-[40px] px-3 rounded-full bg-error text-on-error font-label-md text-[14px] font-bold flex items-center gap-1 shadow-sm active:scale-95" href="tel:1441">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>1441</span>
+</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Scrollable Main App Content -->
+<main class="flex-1 overflow-y-auto w-full px-4 pt-3 pb-8 bg-surface">
+<div class="flex flex-col w-full pb-8">
+<!-- Top Audio Guide Bar -->
+<div class="w-full mb-space-md">
+<button aria-pressed="false" class="w-full min-h-[58px] px-space-md rounded-xl bg-surface-container-high text-primary flex items-center justify-between shadow-sm active:scale-[0.98] transition-all" id="audio-narrator-btn" onclick="toggleSeniorAudioGuide()">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0" id="audio-icon-wrap">
+<span class="material-symbols-outlined text-[24px]">volume_up</span>
+</div>
+<div class="flex flex-col text-left truncate">
+<span class="font-label-lg text-label-lg font-bold text-primary truncate" id="audio-status-label">กดเพื่อฟังเสียงอ่านแนะนำ</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs truncate">แตะ 1 ครั้ง เพื่อให้ระบบอ่านออกเสียงช้าๆ ชัดๆ</span>
+</div>
+</div>
+<div class="hidden items-center gap-1 shrink-0 h-6 px-1" id="audio-bars">
+<span class="w-1 bg-primary h-3 rounded-full animate-pulse"></span>
+<span class="w-1 bg-primary h-6 rounded-full animate-pulse" style="animation-delay: 150ms;"></span>
+<span class="w-1 bg-primary h-4 rounded-full animate-pulse" style="animation-delay: 300ms;"></span>
+</div>
+</button>
+</div>
+<!-- Instruction Banner Card -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">help_center</span>
+<span class="font-label-md text-label-md text-secondary font-bold">ขั้นตอนง่ายๆ</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              ใครโทรหาคุณ?
+            </h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-medium mt-1">
+              แตะเลือก <span class="text-error font-bold underline decoration-2">1 ข้อ</span> ด้านล่าง เพื่อตรวจสอบความปลอดภัยทันที
+            </p>
+</div>
+<!-- Three Huge High-Contrast Choice Cards Stacked Vertically -->
+<div aria-label="หมวดหมู่ผู้โทรเข้า" class="flex flex-col gap-space-md w-full" role="radiogroup">
+<!-- Option 1: Police / Government Official -->
+<a href="urgent-warning-mobile.html" class="block cursor-pointer"><div aria-checked="false" class="group relative w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md active:scale-[0.98] transition-all cursor-pointer flex flex-col justify-between" onclick="selectScamOption('police')" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[38px]" style="font-variation-settings: 'FILL' 1;">local_police</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-md text-[13px] font-bold">พบบ่อยที่สุด</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-1">
+                    ตำรวจ หรือ เจ้าหน้าที่รัฐ / ขนส่ง
+                  </span>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    อ้างว่ามีคดีความ พัสดุตกค้าง หรือบัญชีพัวพันยาเสพติด
+                  </p>
+</div>
+</div></a>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+                  แตะตรงนี้เพื่อตรวจเช็ก
+                </span>
+<span class="material-symbols-outlined text-primary text-[28px]">arrow_forward</span>
+</div>
+</div>
+<!-- Option 2: OTP / Money Transfer Request -->
+<div aria-checked="false" class="group relative w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md active:scale-[0.98] transition-all cursor-pointer flex flex-col justify-between" onclick="selectScamOption('otp')" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-surface-variant text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[38px]" style="font-variation-settings: 'FILL' 1;">phonelink_lock</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-md text-[13px] font-bold">ห้ามบอกรหัสเด็ดขาด</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-1">
+                    ขอรหัส OTP หรือ ให้โอนเงินตรวจสอบ
+                  </span>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    บอกให้กดโอนเงินเข้าบัญชีชั่วคราว หรือขอเลข SMS
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+                  แตะตรงนี้เพื่อตรวจเช็ก
+                </span>
+<span class="material-symbols-outlined text-primary text-[28px]">arrow_forward</span>
+</div>
+</div>
+<!-- Option 3: Bank / Courier Company -->
+<div aria-checked="false" class="group relative w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md active:scale-[0.98] transition-all cursor-pointer flex flex-col justify-between" onclick="selectScamOption('bank')" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[38px]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1 mb-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-md text-[13px] font-bold">กลโกงอ้างชื่อ</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-1">
+                    ธนาคาร หรือ บริษัทพัสดุเอกชน
+                  </span>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    โทรแจ้งยอดผิดปกติ พัสดุมีปัญหา ต้องรีบเคลียร์เงิน
+                  </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+                  แตะตรงนี้เพื่อตรวจเช็ก
+                </span>
+<span class="material-symbols-outlined text-primary text-[28px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Warm Reassuring Advice Box for Grandparents -->
+<div class="w-full mt-space-lg bg-surface-container rounded-xl p-space-md shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0 text-on-secondary">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">จำกฎเหล็ก 3 ข้อ:</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+                ไม่ตกใจ • ไม่รีบโอน • วางสายแล้วปรึกษาคนในบ้าน หรือโทร <strong class="text-error font-bold">1441</strong>
+</p>
+</div>
+</div>
+</div>
+<!-- Modal / Floating Result Card when clicked -->
+<div aria-modal="true" class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4" id="result-modal" role="dialog">
+<div class="w-full max-w-xs bg-surface-container-lowest rounded-2xl p- space-lg p-5 shadow-2xl flex flex-col text-center">
+<div class="w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-3 bg-error-container text-on-error-container" id="modal-badge-icon">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<span class="font-label-md text-[13px] uppercase tracking-wider text-error font-bold">ข้อควรระวังเร่งด่วน</span>
+<h3 class="font-headline-md text-[20px] text-on-surface font-bold mt-1 mb-2" id="modal-title">
+              มิจฉาชีพ 100%!
+            </h3>
+<p class="font-body-lg text-[15px] leading-relaxed text-on-surface-variant mb-4 text-left" id="modal-desc">
+              ตำรวจและเจ้าหน้าที่ศาลตัวจริง จะไม่มีการโทรสั่งให้โอนเงิน หรือส่งเอกสารจับกุมผ่านทางไลน์เด็ดขาด
+            </p>
+<div class="flex flex-col gap-2">
+<a class="w-full min-h-[48px] rounded-xl bg-error text-on-error font-label-lg text-[16px] font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all" href="tel:1441">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>โทรแจ้งตำรวจ 1441 ฟรี</span>
+</a>
+<button class="w-full min-h-[44px] rounded-xl bg-surface-container-high text-on-surface font-label-lg text-[15px] font-bold active:scale-95 transition-all" onclick="closeModal()">
+                เข้าใจแล้ว / วางสายแล้ว
+              </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Floating iOS Home Indicator -->
+<div class="relative w-full pt-2 pb-2 bg-surface/90 backdrop-blur-md flex items-center justify-center pointer-events-none">
+<div class="w-36 h-1 bg-neutral-400/80 rounded-full mb-1"></div>
+</div>
+</div>
+</div>
+<script>
+    let isSpeaking = false;
+    let synthUtterance = null;
+
+    function toggleSeniorAudioGuide() {
+      const btn = document.getElementById('audio-narrator-btn');
+      const label = document.getElementById('audio-status-label');
+      const bars = document.getElementById('audio-bars');
+
+      if (!isSpeaking) {
+        isSpeaking = true;
+        btn.setAttribute('aria-pressed', 'true');
+        label.textContent = "กำลังอ่านออกเสียง...";
+        bars.classList.remove('hidden');
+        bars.classList.add('flex');
+
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const textToRead = "ใครโทรหาคุณ กรุณาแตะเลือกหนึ่งข้อเพื่อตรวจสอบ ข้อที่หนึ่ง ตำรวจ หรือ เจ้าหน้าที่รัฐ อ้างว่ามีคดีความ ข้อที่สอง ขอรหัสโอทีพี หรือ ให้โอนเงินตรวจสอบ ข้อที่สาม ธนาคาร หรือ บริษัทขนส่ง โทรแจ้งยอดเงินผิดปกติ";
+          synthUtterance = new SpeechSynthesisUtterance(textToRead);
+          synthUtterance.lang = 'th-TH';
+          synthUtterance.rate = 0.85;
+          synthUtterance.pitch = 1.0;
+          synthUtterance.onend = () => resetAudioGuide();
+          synthUtterance.onerror = () => resetAudioGuide();
+          window.speechSynthesis.speak(synthUtterance);
+        } else {
+          setTimeout(resetAudioGuide, 6000);
+        }
+      } else {
+        resetAudioGuide();
+      }
+    }
+
+    function resetAudioGuide() {
+      isSpeaking = false;
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      const btn = document.getElementById('audio-narrator-btn');
+      const label = document.getElementById('audio-status-label');
+      const bars = document.getElementById('audio-bars');
+      if (btn) btn.setAttribute('aria-pressed', 'false');
+      if (label) label.textContent = "กดเพื่อฟังเสียงอ่านแนะนำ";
+      if (bars) {
+        bars.classList.add('hidden');
+        bars.classList.remove('flex');
+      }
+    }
+
+    function selectScamOption(type) {
+      const modal = document.getElementById('result-modal');
+      const title = document.getElementById('modal-title');
+      const desc = document.getElementById('modal-desc');
+
+      if (type === 'police') {
+        title.textContent = 'ตำรวจจริงไม่โทรเคลียร์คดี!';
+        desc.textContent = 'มิจฉาชีพมักอ้างว่าบัญชีพัวพันยาเสพติด หรือมีหมายจับ ห้ามกดโอนเงินเด็ดขาด! ให้กดวางสายทันที';
+      } else if (type === 'otp') {
+        title.textContent = 'อันตรายสูงสุด! ห้ามให้เลข OTP';
+        desc.textContent = 'รหัส OTP ใน SMS เปรียบเหมือนกุญแจตู้เซฟ หากบอกผู้อื่น เงินในบัญชีจะถูกโอนออกจนหมดเกลี้ยง';
+      } else if (type === 'bank') {
+        title.textContent = 'ธนาคารไม่โทรแจ้งอายัดบัญชี!';
+        desc.textContent = 'มิจฉาชีพชอบขู่ว่ารูดบัตรเครดิต หรือพัสดุผิดกฎหมาย แนะนำให้วางสายแล้วโทรหาคอลเซ็นเตอร์ธนาคารของตนเอง';
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const alertSpeech = new SpeechSynthesisUtterance("ตรวจพบความเสี่ยงสูง ห้ามโอนเงินเด็ดขาด กรุณาวางสายโทรศัพท์ทันที");
+        alertSpeech.lang = 'th-TH';
+        alertSpeech.rate = 0.85;
+        window.speechSynthesis.speak(alertSpeech);
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('result-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+  </script>
+<!-- Floating Simulator Quick Nav -->
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2.5 text-[11px] font-bold border border-white/20 select-none">
+  <a href="home-call-banner.html" class="hover:text-emerald-400 transition-colors">📞 หน้าแรก</a>
+  <span class="text-slate-600">|</span>
+  <a href="safe-step-mobile.html" class="hover:text-emerald-400 transition-colors">🛡️ SAFE STEP</a>
+  <span class="text-slate-600">|</span>
+  <a href="urgent-warning-mobile.html" class="hover:text-rose-400 transition-colors">🚨 เตือนภัย</a>
+  <span class="text-slate-600">|</span>
+  <a href="line-official-account.html" class="hover:text-emerald-400 transition-colors">💬 LINE OA</a>
+  <span class="text-slate-600">|</span>
+  <a href="../simulator.html" target="_top" class="text-amber-300 hover:text-amber-200">🖥️ ควบคุม</a>
+</div>
+</body></html>

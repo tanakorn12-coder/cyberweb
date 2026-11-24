@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PakCheck - โหมดจำลองโทรศัพท์มือถือหลายรุ่น (Multi-Device Simulator & UX/UI Compare)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#00236f",
+            "primary-container": "#1e3a8a",
+            "on-primary": "#ffffff",
+            "secondary": "#006c4a",
+            "secondary-container": "#82f5c1",
+            "on-secondary": "#ffffff",
+            "surface": "#f9f9ff",
+            "surface-container": "#e7eeff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-high": "#dee8ff",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#111c2d",
+            "on-surface-variant": "#444651",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'Kanit', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    /* Phone Mockup Styling */
+    .phone-wrapper {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .device-iphone {
+      border: 14px solid #1f2937;
+      border-radius: 54px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 2px #4b5563, inset 0 0 0 2px rgba(255,255,255,0.1);
+    }
+    .device-samsung {
+      border: 12px solid #0f172a;
+      border-radius: 36px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 2px #334155;
+    }
+    .device-elderly {
+      border: 18px solid #334155;
+      border-radius: 40px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 4px #0284c7;
+    }
+    .device-tablet {
+      border: 16px solid #1e293b;
+      border-radius: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    }
+    .device-responsive {
+      border: 8px dashed #3b82f6;
+      border-radius: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    /* Dynamic Island */
+    .island {
+      width: 120px;
+      height: 32px;
+      background: #000000;
+      border-radius: 20px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      pointer-events: none;
+    }
+    .hole-punch {
+      width: 14px;
+      height: 14px;
+      background: #000000;
+      border-radius: 50%;
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      pointer-events: none;
+    }
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-on-surface font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shadow-sm">
+            <span class="material-symbols-outlined text-[24px]">verified_user</span>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-primary tracking-tight text-lg">พักเช็ก</span>
+              <span class="text-xs bg-primary/10 text-primary font-bold px-1.5 py-0.5 rounded">Simulator</span>
+            </div>
+            <span class="text-xs text-slate-500 hidden sm:inline">จำลองประสบการณ์มือถือ & LINE ผู้สูงวัย</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation links to main web pages -->
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium">
+        <a href="index.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors">
+          🏠 หน้าเว็บหลัก (ตรวจด่วน)
+        </a>
+        <a href="safe-step.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors">
+          🛡️ ตัวช่วย SAFE STEP
+        </a>
+        <a href="support-radar.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors">
+          👨‍👩‍👧 สะกิดครอบครัว & เรดาร์
+        </a>
+        <a href="emergency-guide.html" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors">
+          🚨 คู่มือกู้ชีพ 1441
+        </a>
+        <span class="px-3 py-1.5 rounded-lg bg-primary text-white font-bold shadow-sm inline-flex items-center gap-1">
+          <span class="material-symbols-outlined text-[18px]">smartphone</span>
+          <span>โหมดจำลองมือถือ</span>
+        </span>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2">
+        <button id="open-ux-modal" class="px-3.5 py-2 rounded-xl bg-secondary/10 hover:bg-secondary/20 text-secondary font-bold text-sm inline-flex items-center gap-1.5 border border-secondary/30 transition-all">
+          <span class="material-symbols-outlined text-[18px]">lightbulb</span>
+          <span class="hidden sm:inline">ทำไมเว็บกับมือถือไม่เหมือนกัน?</span>
+          <span class="sm:hidden">UX/UI Guide</span>
+        </button>
+        <a href="tel:1441" class="px-3.5 py-2 bg-error text-white rounded-xl text-xs sm:text-sm font-bold inline-flex items-center gap-1 shadow-sm active:scale-95">
+          <span class="material-symbols-outlined text-[18px] animate-pulse">call</span>
+          <span>AOC 1441</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Simulator Control Console -->
+  <section class="bg-white border-b border-slate-200 px-4 py-3 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Device Selector -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+          <span class="material-symbols-outlined text-[18px] text-primary">devices</span>
+          เลือกรุ่นมือถือ:
+        </span>
+        <div class="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200 gap-1 text-sm font-semibold">
+          <button class="device-btn active px-3 py-1.5 rounded-lg bg-white text-primary shadow-sm flex items-center gap-1.5 transition-all" data-device="iphone">
+            <span class="material-symbols-outlined text-[16px]">phone_iphone</span>
+            <span>iPhone 16/17 Pro</span>
+          </button>
+          <button class="device-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary transition-all flex items-center gap-1.5" data-device="samsung">
+            <span class="material-symbols-outlined text-[16px]">smartphone</span>
+            <span>Samsung S24 Ultra</span>
+          </button>
+          <button class="device-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary transition-all flex items-center gap-1.5" data-device="elderly">
+            <span class="material-symbols-outlined text-[16px]">elderly</span>
+            <span>มือถือโหมดผู้สูงวัย</span>
+          </button>
+          <button class="device-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary transition-all flex items-center gap-1.5 hidden lg:flex" data-device="tablet">
+            <span class="material-symbols-outlined text-[16px]">tablet_mac</span>
+            <span>iPad / Tablet</span>
+          </button>
+          <button class="device-btn px-3 py-1.5 rounded-lg text-slate-600 hover:text-primary transition-all flex items-center gap-1.5" data-device="responsive">
+            <span class="material-symbols-outlined text-[16px]">fit_screen</span>
+            <span>ปรับขนาดอิสระ</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls: Zoom, Orientation, Fullscreen, Open New Tab -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <!-- Scale / Zoom -->
+        <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+          <span class="px-2 text-slate-500">ซูม:</span>
+          <button class="zoom-btn px-2 py-1 rounded hover:bg-white text-slate-700" data-scale="0.75">75%</button>
+          <button class="zoom-btn px-2 py-1 rounded hover:bg-white text-slate-700" data-scale="0.85">85%</button>
+          <button class="zoom-btn active px-2 py-1 rounded bg-white text-primary font-bold shadow-sm" data-scale="1.0">100%</button>
+          <button class="zoom-btn px-2 py-1 rounded hover:bg-white text-slate-700" data-scale="1.15">115%</button>
+        </div>
+
+        <!-- Rotate Button -->
+        <button id="rotate-btn" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-semibold inline-flex items-center gap-1" title="หมุนหน้าจอ แนวตั้ง / แนวนอน">
+          <span class="material-symbols-outlined text-[18px]">screen_rotation</span>
+          <span class="hidden sm:inline">หมุนจอ</span>
+        </button>
+
+        <!-- Reload Button -->
+        <button id="reload-frame" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-semibold inline-flex items-center gap-1" title="รีเฟรชหน้าจอ">
+          <span class="material-symbols-outlined text-[18px]">refresh</span>
+        </button>
+
+        <!-- Open External Button -->
+        <a id="open-external" href="mobile/home-call-banner.html" target="_blank" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-semibold inline-flex items-center gap-1" title="เปิดเต็มจอในแท็บใหม่">
+          <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+          <span class="hidden sm:inline">เปิดแท็บใหม่</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Screen Scenario Switcher (The 8+ Mobile Screens from Stitch 2) -->
+    <div class="max-w-7xl mx-auto mt-3 pt-3 border-t border-slate-100 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+      <span class="text-xs font-bold text-slate-400 shrink-0 uppercase tracking-wider flex items-center gap-1">
+        <span class="material-symbols-outlined text-[16px] text-secondary">layers</span>
+        เลือกสถานการณ์หน้าจอ:
+      </span>
+
+      <!-- 1. Phone Home + Call Banner -->
+      <button class="scene-btn active shrink-0 px-3 py-1.5 rounded-xl bg-primary text-white font-semibold text-xs shadow-sm flex items-center gap-1.5 transition-all" data-src="mobile/home-call-banner.html" data-title="หน้าจอหลักมือถือ + แบนเนอร์สายเข้า (Phone Home & Call Banner)">
+        <span class="material-symbols-outlined text-[16px]">call</span>
+        <span>1. สายเข้าเตือนภัย</span>
+      </button>
+
+      <!-- 2. SAFE STEP Situation Selector -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/safe-step-mobile.html" data-title="SAFE STEP บนมือถือ (Situation Selector)">
+        <span class="material-symbols-outlined text-[16px]">checklist</span>
+        <span>2. SAFE STEP คัดกรอง</span>
+      </button>
+
+      <!-- 3. Urgent Warning Do's / Don'ts -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/urgent-warning-mobile.html" data-title="การเตือนภัยสีแดง ห้ามโอน (Urgent Red Warning)">
+        <span class="material-symbols-outlined text-[16px] text-red-500">warning</span>
+        <span>3. เตือนภัยสีแดง</span>
+      </button>
+
+      <!-- 4. Direct Caregiver Call -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/family-call-mobile.html" data-title="สะกิดโทรหาลูกหลาน (Caregiver Direct Call)">
+        <span class="material-symbols-outlined text-[16px] text-green-600">family_restroom</span>
+        <span>4. โทรหาลูกหลาน</span>
+      </button>
+
+      <!-- 5. LINE Chat List -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/line-chat-list.html" data-title="LINE: หน้ารวมแชตปักหมุดพักเช็ก (LINE Chat List)">
+        <span class="material-symbols-outlined text-[16px] text-emerald-600">chat</span>
+        <span>5. หน้ารวมแชต LINE</span>
+      </button>
+
+      <!-- 6. LINE Official Account & Oversized Rich Menu -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/line-official-account.html" data-title="LINE OA + เมนูยักษ์ผู้สูงวัย (Oversized Rich Menu)">
+        <span class="material-symbols-outlined text-[16px] text-emerald-600">smart_toy</span>
+        <span>6. LINE OA เมนูยักษ์</span>
+      </button>
+
+      <!-- 7. LINE AI Scan -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/line-ai-scan.html" data-title="LINE: สแกนเอกสารปลอมด้วย AI (Multimodal Analysis)">
+        <span class="material-symbols-outlined text-[16px] text-blue-600">document_scanner</span>
+        <span>7. LINE AI สแกนเอกสาร</span>
+      </button>
+
+      <!-- 8. LINE Flex Message -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="mobile/line-flex-message.html" data-title="LINE: การ์ดเตือนภัยสีแดง (Flex Message Result Card)">
+        <span class="material-symbols-outlined text-[16px] text-rose-600">mark_chat_unread</span>
+        <span>8. LINE Flex Message</span>
+      </button>
+
+      <!-- 9. Live Web Responsive on Mobile -->
+      <button class="scene-btn shrink-0 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs flex items-center gap-1.5 transition-all" data-src="index.html" data-title="หน้าเว็บหลักในมุมมองโทรศัพท์ (Responsive Web View)">
+        <span class="material-symbols-outlined text-[16px] text-indigo-600">language</span>
+        <span>9. เว็บหลักในมือถือ</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Simulator Main Stage -->
+  <main class="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 overflow-auto">
+
+    <!-- Active Screen Title Badge -->
+    <div class="mb-4 flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-sm border border-slate-200 text-xs font-semibold text-slate-700">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span id="active-screen-title">หน้าจอหลักมือถือ + แบนเนอร์สายเข้า (Phone Home & Call Banner)</span>
+      <span class="text-slate-300">|</span>
+      <span id="device-spec-label" class="text-slate-500">iPhone 16/17 Pro (393 × 852 px)</span>
+    </div>
+
+    <!-- Device Frame Wrapper -->
+    <div id="device-container" class="phone-wrapper relative bg-white overflow-hidden transition-all duration-300 flex flex-col items-center justify-center device-iphone" style="width: 393px; height: 852px; transform: scale(1.0); transform-origin: top center;">
+      
+      <!-- Top Sensor / Dynamic Island (for iPhone) -->
+      <div id="sensor-notch" class="island">
+        <span class="text-[10px] text-white/90 font-medium tracking-tight">09:41</span>
+        <div class="flex items-center gap-1">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
+          <span class="material-symbols-outlined text-[14px] text-white">shield</span>
+        </div>
+      </div>
+
+      <!-- Iframe Displaying the Real Phone Screen -->
+      <iframe id="phone-frame" src="mobile/home-call-banner.html" class="w-full h-full border-0 rounded-[40px] bg-white" title="PakCheck Mobile View"></iframe>
+
+      <!-- Bottom Home Indicator Bar -->
+      <div id="home-indicator" class="w-32 h-1 bg-slate-900 rounded-full absolute bottom-2 left-1/2 -translate-x-1/2 pointer-events-none z-50"></div>
+    </div>
+
+    <!-- Quick Switcher Bar Below Device -->
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-500">
+      <span class="font-semibold">💡 ทริกการทดสอบ:</span>
+      <span>คลิกปุ่มบนหน้าจอมือถือเพื่อทดสอบการตอบสนองได้เหมือนเครื่องจริง</span>
+      <span>•</span>
+      <button onclick="document.getElementById('open-ux-modal').click()" class="text-primary font-bold underline hover:text-primary-container">
+        อ่านบทวิเคราะห์ UI/UX Web vs Mobile
+      </button>
+    </div>
+
+  </main>
+
+  <!-- UX/UI Guide Modal / Comparative Analysis -->
+  <div id="ux-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl p-6 sm:p-8 flex flex-col gap-6 animate-in fade-in duration-200">
+      
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-md">
+            <span class="material-symbols-outlined text-[28px]">design_services</span>
+          </div>
+          <div class="flex flex-col">
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">บทวิเคราะห์ UX/UI: ทำไมเว็บไซต์กับในโทรศัพท์มือถือจึงไม่เหมือนกัน?</h2>
+            <p class="text-sm text-slate-500">ไขข้อข้องใจการออกแบบเพื่อผู้สูงวัยไทย และสถาปัตยกรรม 2 ระบบที่ทำงานเกื้อหนุนกัน (Cross-Generational Guard)</p>
+          </div>
+        </div>
+        <button id="close-ux-modal" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 shrink-0">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Comparison Matrix -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Mobile & LINE OA Card -->
+        <div class="bg-emerald-50/70 border-2 border-emerald-500/30 rounded-2xl p-5 flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-emerald-800 font-bold text-lg">
+            <span class="material-symbols-outlined text-[26px] text-emerald-600">smartphone</span>
+            <h3>1. ในโทรศัพท์มือถือ & LINE OA (Frontline Guard)</h3>
+          </div>
+          <p class="text-xs text-emerald-900 font-medium">
+            🎯 <strong>ผู้ใช้งานหลัก:</strong> ผู้สูงวัย คุณตา คุณยาย ที่กำลังเผชิญเหตุการณ์จริง
+          </p>
+          <ul class="text-sm text-slate-700 flex flex-col gap-2.5">
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600 font-bold">✔</span>
+              <span><strong>Thumb Zone & ปุ่มยักษ์:</strong> นิ้วมือผู้สูงวัยมีความแม่นยำลดลง ปุ่มจึงต้องสูงอย่างน้อย 60–80px วางอยู่ในจุดที่นิ้วโป้งเอื้อมถึงง่าย</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600 font-bold">✔</span>
+              <span><strong>Zero-Typing (ไม่ต้องพิมพ์):</strong> ผู้สูงวัยสายตาฝ้าฟาง ไม่ชอบพิมพ์แป้นพิมพ์มือถือ ใช้เพียงการ "แตะเลือกการ์ด", "ส่งรูปเข้าแชต LINE", หรือ "กดฟังเสียงอ่าน"</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600 font-bold">✔</span>
+              <span><strong>LINE Official Account คือชีวิตประจำวัน:</strong> คนไทย 95% ใช้ LINE ประจำ จึงมี Oversized Rich Menu ให้กดตรวจสายด่วน/ส่งสลิปได้ทันที</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-emerald-600 font-bold">✔</span>
+              <span><strong>Golden Hour Intervention:</strong> เตือนไฟแดงทันทีขณะคุยสาย ไม่ต้องเปิดเบราว์เซอร์ค้นหา</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desktop Web Card -->
+        <div class="bg-blue-50/70 border-2 border-blue-500/30 rounded-2xl p-5 flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-blue-900 font-bold text-lg">
+            <span class="material-symbols-outlined text-[26px] text-blue-600">desktop_windows</span>
+            <h3>2. หน้าจอเว็บไซต์ Desktop Web (Family Command Center)</h3>
+          </div>
+          <p class="text-xs text-blue-900 font-medium">
+            🎯 <strong>ผู้ใช้งานหลัก:</strong> ลูกหลาน, ผู้ดูแลครอบครัว, เจ้าหน้าที่, หรือผู้สูงวัยที่นั่งโต๊ะตรวจข้อมูล
+          </p>
+          <ul class="text-sm text-slate-700 flex flex-col gap-2.5">
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✔</span>
+              <span><strong>มุมมองกว้างขวาง (Comprehensive View):</strong> แสดงตารางเปรียบเทียบ สัญญาณไฟ 3 สี (เขียว-เหลือง-แดง) พร้อมสถิติความเสียหายภาพรวม</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✔</span>
+              <span><strong>เครื่องมือกู้ชีพ & พิมพ์เอกสาร (Print PDF):</strong> สำหรับบันทึกเลขเคสธนาคาร (Bank Case ID), รวบรวมสลิป พิมพ์ใบลำดับเหตุการณ์ไปแจ้งความ สน.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✔</span>
+              <span><strong>ตรวจสอบลึก (Deep Investigation):</strong> มีช่องพิมพ์ตรวจหมายเลขบัญชี Blacklist, ตรวจสอบ URL ละเอียด, และเปิดเทียบหน้าเว็บจริงกับเว็บปลอม</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-blue-600 font-bold">✔</span>
+              <span><strong>คลังบทเรียนลูกหลาน:</strong> คลังสื่อสอนคนในครอบครัวรู้ทันกลโกงล่าสุด</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Conclusion & Best Practice -->
+      <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col gap-3">
+        <h4 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+          <span class="material-symbols-outlined text-amber-500 text-[22px]">verified</span>
+          สรุปคำตอบ: "ต้องเลือก UX/UI อันไหน หรือคงไว้ทั้งสองแบบ?"
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          <strong>คำตอบคือ "ต้องคงไว้ทั้งสองแบบและเชื่อมโยงกันเป็นระบบนิเวศ (Ecosystem)"</strong> เพราะการแก้ปัญหาอาชญากรรมไซเบอร์ในครอบครัวไทย <em>ผู้สูงอายุเป็นผู้เผชิญเหตุด่านหน้า (ต้องการ UX ที่ไว ไม่ต้องพิมพ์ ปุ่มใหญ่ อยู่ใน LINE/มือถือ)</em> แต่ <em>ลูกหลานเป็นผู้ช่วยตัดสินใจและดำเนินการทางกฎหมาย/อายัดเงิน (ต้องการ UX บนเว็บที่ข้อมูลครบ มีช่องกรอก พิมพ์เอกสารได้)</em> การมีทั้งสองระบบจึงปกป้องครอบครัวได้อย่างสมบูรณ์แบบ 100%!
+        </p>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button id="close-ux-modal-btn" class="px-6 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow hover:bg-primary-container transition-all">
+          เข้าใจแล้ว เริ่มทดสอบระบบจำลองต่อ
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-white border-t border-slate-200 py-4 px-4 text-center text-xs text-slate-500">
+    © 2025 พักเช็ก (PakCheck) - ระบบจำลองมือถือและสถาปัตยกรรมคุ้มครองภัยไซเบอร์ผู้สูงวัยไทย
+  </footer>
+
+  <!-- Simulator Logic Script -->
+  <script>
+    (function() {
+      const container = document.getElementById('device-container');
+      const frame = document.getElementById('phone-frame');
+      const sensor = document.getElementById('sensor-notch');
+      const specLabel = document.getElementById('device-spec-label');
+      const titleLabel = document.getElementById('active-screen-title');
+      const extLink = document.getElementById('open-external');
+
+      // Device Specs (width, height, class, sensorType)
+      const devices = {
+        iphone: {
+          w: 393,
+          h: 852,
+          cls: 'device-iphone',
+          notch: 'island',
+          label: 'iPhone 16/17 Pro (393 × 852 px)'
+        },
+        samsung: {
+          w: 412,
+          h: 915,
+          cls: 'device-samsung',
+          notch: 'hole',
+          label: 'Samsung S24 Ultra (412 × 915 px)'
+        },
+        elderly: {
+          w: 400,
+          h: 820,
+          cls: 'device-elderly',
+          notch: 'none',
+          label: 'มือถือโหมดผู้สูงวัย (Easy Mode - High Touch Target)'
+        },
+        tablet: {
+          w: 768,
+          h: 1024,
+          cls: 'device-tablet',
+          notch: 'none',
+          label: 'iPad / Tablet (768 × 1024 px)'
+        },
+        responsive: {
+          w: 375,
+          h: 780,
+          cls: 'device-responsive',
+          notch: 'none',
+          label: 'Responsive Viewport (Custom Frame)'
+        }
+      };
+
+      let currentDevice = 'iphone';
+      let currentScale = 1.0;
+      let isLandscape = false;
+
+      function updateDevice() {
+        const spec = devices[currentDevice];
+        let width = isLandscape ? spec.h : spec.w;
+        let height = isLandscape ? spec.w : spec.h;
+
+        // Clean previous device classes
+        container.classList.remove('device-iphone', 'device-samsung', 'device-elderly', 'device-tablet', 'device-responsive');
+        container.classList.add(spec.cls);
+
+        container.style.width = width + 'px';
+        container.style.height = height + 'px';
+        container.style.transform = `scale(${currentScale})`;
+
+        specLabel.textContent = spec.label + (isLandscape ? ' [แนวนอน]' : ' [แนวตั้ง]');
+
+        // Sensor Notch Update
+        if (spec.notch === 'island' && !isLandscape) {
+          sensor.className = 'island';
+          sensor.innerHTML = '<span class="text-[10px] text-white/90 font-medium tracking-tight">09:41</span><div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div><span class="material-symbols-outlined text-[13px] text-white">shield</span></div>';
+          sensor.style.display = 'flex';
+        } else if (spec.notch === 'hole' && !isLandscape) {
+          sensor.className = 'hole-punch';
+          sensor.innerHTML = '';
+          sensor.style.display = 'block';
+        } else {
+          sensor.style.display = 'none';
+        }
+      }
+
+      // Device Buttons Click
+      document.querySelectorAll('.device-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.device-btn').forEach(b => {
+            b.classList.remove('active', 'bg-white', 'text-primary', 'shadow-sm');
+            b.classList.add('text-slate-600');
+          });
+          btn.classList.add('active', 'bg-white', 'text-primary', 'shadow-sm');
+          btn.classList.remove('text-slate-600');
+
+          currentDevice = btn.dataset.device;
+          updateDevice();
+        });
+      });
+
+      // Zoom Buttons Click
+      document.querySelectorAll('.zoom-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.zoom-btn').forEach(b => {
+            b.classList.remove('active', 'bg-white', 'text-primary', 'font-bold', 'shadow-sm');
+            b.classList.add('text-slate-700');
+          });
+          btn.classList.add('active', 'bg-white', 'text-primary', 'font-bold', 'shadow-sm');
+          btn.classList.remove('text-slate-700');
+
+          currentScale = parseFloat(btn.dataset.scale);
+          updateDevice();
+        });
+      });
+
+      // Rotate Button Click
+      document.getElementById('rotate-btn')?.addEventListener('click', () => {
+        isLandscape = !isLandscape;
+        updateDevice();
+      });
+
+      // Reload Frame
+      document.getElementById('reload-frame')?.addEventListener('click', () => {
+        frame.src = frame.src;
+      });
+
+      // Scene Switcher Buttons
+      document.querySelectorAll('.scene-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.scene-btn').forEach(b => {
+            b.classList.remove('active', 'bg-primary', 'text-white', 'shadow-sm');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('active', 'bg-primary', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+          const src = btn.dataset.src;
+          const title = btn.dataset.title;
+
+          frame.src = src;
+          extLink.href = src;
+          titleLabel.textContent = title;
+        });
+      });
+
+      // UX Modal Handlers
+      const modal = document.getElementById('ux-modal');
+      const openModalBtn = document.getElementById('open-ux-modal');
+      const closeModalBtn = document.getElementById('close-ux-modal');
+      const closeModalBtn2 = document.getElementById('close-ux-modal-btn');
+
+      const showModal = () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+      const hideModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      };
+
+      openModalBtn?.addEventListener('click', showModal);
+      closeModalBtn?.addEventListener('click', hideModal);
+      closeModalBtn2?.addEventListener('click', hideModal);
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) hideModal();
+      });
+
+      // Initialize
+      updateDevice();
+    })();
+  </script>
+</body>
+</html>

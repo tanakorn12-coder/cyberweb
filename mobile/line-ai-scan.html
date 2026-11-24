@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>PakCheck - เริ่มต้นใช้งาน</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-variant": "#d8e3fb",
+        "inverse-on-surface": "#ecf1ff",
+        "secondary-container": "#82f5c1",
+        "error": "#ba1a1a",
+        "inverse-primary": "#b6c4ff",
+        "outline-variant": "#c5c5d3",
+        "surface-dim": "#cfdaf2",
+        "tertiary-container": "#87000a",
+        "surface-bright": "#f9f9ff",
+        "on-tertiary": "#ffffff",
+        "background": "#f9f9ff",
+        "on-secondary-fixed-variant": "#005137",
+        "primary": "#00236f",
+        "surface": "#f9f9ff",
+        "outline": "#757682",
+        "on-tertiary-container": "#ff8b80",
+        "surface-container-low": "#f0f3ff",
+        "on-secondary-fixed": "#002114",
+        "on-primary-container": "#90a8ff",
+        "inverse-surface": "#263143",
+        "tertiary-fixed": "#ffdad6",
+        "primary-container": "#1e3a8a",
+        "on-surface": "#111c2d",
+        "tertiary": "#5d0004",
+        "on-tertiary-fixed-variant": "#93000b",
+        "on-error-container": "#93000a",
+        "on-surface-variant": "#444651",
+        "secondary-fixed-dim": "#68dba9",
+        "on-primary": "#ffffff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#d8e3fb",
+        "secondary-fixed": "#85f8c4",
+        "tertiary-fixed-dim": "#ffb4ab",
+        "error-container": "#ffdad6",
+        "secondary": "#006c4a",
+        "surface-tint": "#4059aa",
+        "on-error": "#ffffff",
+        "primary-fixed-dim": "#b6c4ff",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#410002",
+        "surface-container": "#e7eeff",
+        "primary-fixed": "#dce1ff",
+        "surface-container-high": "#dee8ff",
+        "on-primary-fixed": "#00164e",
+        "on-primary-fixed-variant": "#264191",
+        "on-secondary-container": "#00714e",
+        "on-background": "#111c2d"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.5rem",
+        "margin": "2.5rem",
+        "space-md": "1.25rem",
+        "space-xl": "3rem",
+        "space-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Be Vietnam Pro"],
+        "headline-lg": ["Be Vietnam Pro"],
+        "label-md": ["Be Vietnam Pro"],
+        "body-xl": ["Be Vietnam Pro"],
+        "display-hero": ["Be Vietnam Pro"],
+        "hotline-display": ["Be Vietnam Pro"],
+        "body-lg": ["Be Vietnam Pro"],
+        "headline-sm": ["Be Vietnam Pro"],
+        "label-lg": ["Be Vietnam Pro"],
+        "headline-md": ["Be Vietnam Pro"]
+      },
+      "fontSize": {
+        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "label-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+        "display-hero": ["40px", {"lineHeight": "52px", "fontWeight": "700"}],
+        "hotline-display": ["30px", {"lineHeight": "36px", "fontWeight": "800"}],
+        "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+        "headline-sm": ["22px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "label-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+        "headline-md": ["26px", {"lineHeight": "38px", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background text-on-surface antialiased min-h-screen flex flex-col pt-safe pb-safe"><main class="flex-1 flex flex-col relative w-full px-gutter bg-surface"><div class="flex flex-col w-full pb-6 space-y-4">
+<!-- LINE Custom Navigation Bar / Sub-Header -->
+<div class="flex items-center justify-between bg-surface-container px-4 py-3 rounded-2xl shadow-sm">
+<div class="flex items-center space-x-3">
+<button aria-label="กลับ" class="flex items-center justify-center w-10 h-10 rounded-full bg-surface text-primary focus:outline-none focus:ring-2 focus:ring-primary" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center space-x-2">
+<div class="relative flex items-center justify-center w-11 h-11 rounded-full bg-primary text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px]">verified_user</span>
+<span class="absolute -bottom-0.5 -right-0.5 flex items-center justify-center w-4 h-4 rounded-full bg-secondary text-on-secondary">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center space-x-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">พักเช็ก (PakCheck)</span>
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;" title="บัญชีทางการได้รับการรับรอง">verified</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> พร้อมตรวจสอบ 24 ชม.
+          </span>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-1">
+<button aria-label="โทรสายด่วนตำรวจไซเบอร์" class="flex items-center justify-center px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] mr-1 text-tertiary">phone_in_talk</span> 1441
+      </button>
+</div>
+</div>
+<!-- Chat History Stream -->
+<div class="flex flex-col space-y-6 pt-2">
+<!-- Chat Timestamp Divider -->
+<div class="flex items-center justify-center my-1">
+<span class="px-4 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md shadow-sm">
+        วันนี้ 14:28 น.
+      </span>
+</div>
+<!-- User Message Bubble (Right Side) -->
+<div class="flex flex-col items-end space-y-2 pl-8">
+<div class="max-w-[88%] bg-primary-fixed text-on-primary-fixed rounded-2xl rounded-tr-none p-3.5 shadow-md flex flex-col space-y-2.5">
+<!-- Suspicious Document Preview Card -->
+<a href="line-flex-message.html" class="block cursor-pointer" title="แตะเพื่อดูผลตรวจ Flex Message"><div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm p-3">
+<div class="flex items-center justify-between pb-2 mb-2 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<div class="flex items-center space-x-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-md text-label-md text-tertiary">เอกสารแนบสงสัย</span>
+</div>
+<span class="text-tertiary-container bg-tertiary-fixed px-2 py-0.5 rounded text-[12px] font-bold">ตราแดง</span>
+</div>
+<div class="relative rounded-lg overflow-hidden bg-surface-variant/30 p-2 flex flex-col items-center">
+<!-- Simulated Document Visual with Detailed Prompt -->
+<div class="w-full h-44 rounded bg-cover bg-center relative flex flex-col justify-between p-2 shadow-inner" data-alt="A smartphone camera photo of an official looking Thai police legal summons warrant paper resting on a wooden table. The Thai text reads หมายเรียกตรวจสอบบัญชี สำนักงานตำรวจแห่งชาติ with a dramatic, crooked, fake red rubber stamp ink seal overlaid across the center. High contrast, realistic paper texture, documentary style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWzgJHBCym3rN5pal3umiCH0pJGmSBqEwHZB4-dG0173WXfKSbtCIYu694ndGYx0dWzKYLG3bqi4N9fYdR1nJX5hfhzlTQQJc8EgMOXZ3tgF4KWqpwsTZ3TeVjbp1-YrLnuczPEUwBqXg1Ns6hBULP9Q7I2kjyF697ScRXN75dGQyRtbntSb3NSYezTG1q1-U_75TXXmlY1mC-kihbOVKMl7xGJ-miUeOq4bD4Hasq')">
+<!-- Watermark Stamp Overlay Badge -->
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="transform -rotate-12 bg-tertiary/90 text-on-tertiary px-3 py-1 rounded-lg shadow-lg flex items-center space-x-1">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-md text-label-md tracking-wider">ตราประทับปลอม</span>
+</div>
+</div>
+</div>
+<div class="w-full mt-2 text-center bg-surface px-2 py-1 rounded">
+<p class="font-label-md text-label-md text-on-surface truncate">หมายเรียกตรวจสอบบัญชี_ตร.pdf</p>
+</div>
+</div>
+</div>
+<!-- User Accompanying Text -->
+<p class="font-body-xl text-body-xl text-on-primary-fixed leading-relaxed pt-1 px-1">
+          แม่เพิ่งได้รูปนี้มาในไลน์ ช่วยดูให้หน่อยจ้ะว่าจริงไหม
+        </p>
+<!-- Message Meta -->
+<div class="flex items-center justify-end space-x-1 pr-1">
+<span class="font-label-md text-[13px] text-on-primary-fixed-variant">14:28 น.</span>
+<span class="material-symbols-outlined text-[16px] text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">done_all</span>
+</div>
+</div>
+</div>
+<!-- Bot Response Bubble (Left Side) - Active Inspection -->
+<div class="flex items-start space-x-2 pr-4">
+<!-- Shield Avatar -->
+<div class="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-primary-container text-on-primary-container shadow-md">
+<span class="material-symbols-outlined text-[26px]">shield_with_heart</span>
+</div>
+<!-- Bubble Card Container -->
+<div class="flex-1 bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-lg flex flex-col space-y-4">
+<!-- Audio Read Aloud Capsule Component -->
+<div class="flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="font-label-md text-label-md text-primary font-bold">ระบบกำลังอ่านออกเสียง...</span>
+</div>
+<!-- Equalizer animation bar -->
+<div class="flex items-end space-x-1 h-5 px-2">
+<span class="w-1 bg-primary rounded-full animate-pulse h-3"></span>
+<span class="w-1 bg-primary rounded-full animate-pulse h-5" style="animation-delay: 150ms;"></span>
+<span class="w-1 bg-primary rounded-full animate-pulse h-2" style="animation-delay: 300ms;"></span>
+<span class="w-1 bg-primary rounded-full animate-pulse h-4" style="animation-delay: 450ms;"></span>
+</div>
+</div>
+<!-- Scanning Card Graphic & Scanner Overlay -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container p-4 flex flex-col items-center">
+<!-- Document Scan Backdrop Placeholder -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden bg-cover bg-center flex items-center justify-center shadow-inner" data-alt="Close up macro scan view of a legal royal Thai official document seal and typography showing digital grid overlay, holographic cyan safety scan lines, glowing analysis vectors inspecting fraudulent signature and emblem." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWDel18k_QUmgBEqoqpsxw-b31flHtElAy0-fLfvEd3MwaMGHIh0m3mPxP8gs5CzsbWOAPvCXNd_JDc-dxnjmheHEXag6u6JG593cNDtKIMUH2jVGoo0uBVgf1hNxBnmEWVw_Pxcfiu9rm-iebcRHK4rjV_eg-LPIjMLAoM4sjX00l8H0VmayzSKmycLKNQf0Q51I0AyayU-gWt8sXHgP0mZx-VnGS_VHNkDCjzKW0')">
+<!-- Translucent Scan Scrim -->
+<div class="absolute inset-0 bg-primary/40"></div>
+<!-- Animated Radar / Scanner Line -->
+<div class="absolute inset-x-0 top-0 h-1.5 bg-secondary-fixed shadow-[0_0_16px_4px] shadow-secondary-fixed animate-[scan_2.5s_ease-in-out_infinite]"></div>
+<!-- Central Scanning Icon Badge -->
+<div class="relative z-10 flex flex-col items-center justify-center p-3 rounded-full bg-surface/90 text-primary shadow-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-[36px] animate-bounce text-primary" style="font-variation-settings: 'FILL' 1;">document_scanner</span>
+</div>
+<!-- Live Verification Target Pointers -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 px-2 py-1 rounded text-primary text-[11px] font-bold shadow-sm flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>ตรวจตราครุฑ</span>
+</div>
+<div class="absolute bottom-4 right-4 bg-surface-container-lowest/90 px-2 py-1 rounded text-error text-[11px] font-bold shadow-sm flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>ลายเซ็นผิดรูปแบบ</span>
+</div>
+</div>
+<!-- Pulsing Progress Bar -->
+<div class="w-full mt-4">
+<div class="flex items-center justify-between mb-1.5 px-0.5">
+<span class="font-label-md text-label-md text-primary font-bold flex items-center space-x-1">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+<span>AI Multimodal Engine</span>
+</span>
+<span class="font-label-md text-label-md text-secondary font-bold">68%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-variant overflow-hidden p-0.5">
+<div class="h-full bg-secondary rounded-full w-2/3 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Big Prominent Status Text for Seniors -->
+<div class="space-y-2">
+<div class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-secondary text-[26px] mt-0.5" style="font-variation-settings: 'FILL' 1;">manage_search</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">
+              กำลังวิเคราะห์เอกสารด้วย AI (Multimodal Analysis)...
+            </h2>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              ระบบกำลังตรวจลายน้ำ ตราประทับราชการ และความสอดคล้องของฟอนต์ รอสักครู่ (ประมาณ 3 วินาที) <strong class="text-on-surface">ไม่ต้องกดอะไรนะครับ</strong>
+</p>
+</div>
+</div></a>
+<!-- Safety Assurance Pill -->
+<div class="flex items-center space-x-2 text-secondary bg-secondary-container/30 px-3.5 py-2.5 rounded-xl">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+<span class="font-label-md text-label-md text-on-secondary-container">พักเช็กช่วยตรวจสอบเทียบฐานข้อมูลศูนย์ AOC 1441 ทันที</span>
+</div>
+<!-- Bottom Bubble Meta -->
+<div class="flex items-center justify-between pt-1 border-t-0">
+<span class="font-label-md text-[13px] text-outline">PakCheck AI SafeGuard</span>
+<span class="font-label-md text-[13px] text-outline">14:28 น.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Senior Protective Action Rail / Quick Help Tray -->
+<div class="mt-4 pt-3 bg-surface-container-low p-4 rounded-2xl shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-tertiary text-[22px]">security_update_warning</span>
+<span>คำแนะนำเบื้องต้น</span>
+</span>
+<span class="font-label-md text-label-md text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">สำคัญมาก</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-3 bg-surface-container-lowest rounded-xl flex items-center space-x-2 shadow-sm">
+<span class="material-symbols-outlined text-error text-[24px]">block</span>
+<span class="font-label-md text-label-md text-on-surface">ห้ามโอนเงินเด็ดขาด</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-xl flex items-center space-x-2 shadow-sm">
+<span class="material-symbols-outlined text-error text-[24px]">link_off</span>
+<span class="font-label-md text-label-md text-on-surface">ห้ามกดลิงก์ที่แนบมา</span>
+</div>
+</div>
+<!-- Emergency Hotline Large Button -->
+<a class="flex items-center justify-center space-x-2 w-full py-3.5 bg-tertiary text-on-tertiary rounded-xl font-label-lg text-label-lg shadow-md hover:bg-tertiary-container focus:ring-4 focus:ring-tertiary-fixed" href="tel:1441">
+<span class="material-symbols-outlined text-[24px] animate-pulse">call</span>
+<span>โทรปรึกษาสายด่วนตำรวจไซเบอร์ 1441 (ฟรี)</span>
+</a>
+</div>
+</div>
+<!-- Inline CSS Keyframe for Scanning Laser Effect -->
+<script>
+  // Add dynamic scanning animation keyframe if not present in Tailwind
+  if (!document.getElementById('pakcheck-scan-keyframes')) {
+    const styleEl = document.createElement('style');
+    styleEl.id = 'pakcheck-scan-keyframes';
+    styleEl.innerHTML = `
+      @keyframes scan {
+        0%, 100% { top: 0%; opacity: 0.8; }
+        50% { top: 92%; opacity: 1; }
+      }
+    `;
+    document.head.appendChild(styleEl);
+  }
+</script></main><!-- Floating Simulator Quick Nav -->
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2.5 text-[11px] font-bold border border-white/20 select-none">
+  <a href="home-call-banner.html" class="hover:text-emerald-400 transition-colors">📞 หน้าแรก</a>
+  <span class="text-slate-600">|</span>
+  <a href="safe-step-mobile.html" class="hover:text-emerald-400 transition-colors">🛡️ SAFE STEP</a>
+  <span class="text-slate-600">|</span>
+  <a href="urgent-warning-mobile.html" class="hover:text-rose-400 transition-colors">🚨 เตือนภัย</a>
+  <span class="text-slate-600">|</span>
+  <a href="line-official-account.html" class="hover:text-emerald-400 transition-colors">💬 LINE OA</a>
+  <span class="text-slate-600">|</span>
+  <a href="../simulator.html" target="_top" class="text-amber-300 hover:text-amber-200">🖥️ ควบคุม</a>
+</div>
+</body></html>

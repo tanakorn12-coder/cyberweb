@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>PakCheck - เริ่มต้นใช้งาน</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-variant": "#d8e3fb",
+        "inverse-on-surface": "#ecf1ff",
+        "secondary-container": "#82f5c1",
+        "error": "#ba1a1a",
+        "inverse-primary": "#b6c4ff",
+        "outline-variant": "#c5c5d3",
+        "surface-dim": "#cfdaf2",
+        "tertiary-container": "#87000a",
+        "surface-bright": "#f9f9ff",
+        "on-tertiary": "#ffffff",
+        "background": "#f9f9ff",
+        "on-secondary-fixed-variant": "#005137",
+        "primary": "#00236f",
+        "surface": "#f9f9ff",
+        "outline": "#757682",
+        "on-tertiary-container": "#ff8b80",
+        "surface-container-low": "#f0f3ff",
+        "on-secondary-fixed": "#002114",
+        "on-primary-container": "#90a8ff",
+        "inverse-surface": "#263143",
+        "tertiary-fixed": "#ffdad6",
+        "primary-container": "#1e3a8a",
+        "on-surface": "#111c2d",
+        "tertiary": "#5d0004",
+        "on-tertiary-fixed-variant": "#93000b",
+        "on-error-container": "#93000a",
+        "on-surface-variant": "#444651",
+        "secondary-fixed-dim": "#68dba9",
+        "on-primary": "#ffffff",
+        "on-secondary": "#ffffff",
+        "surface-container-highest": "#d8e3fb",
+        "secondary-fixed": "#85f8c4",
+        "tertiary-fixed-dim": "#ffb4ab",
+        "error-container": "#ffdad6",
+        "secondary": "#006c4a",
+        "surface-tint": "#4059aa",
+        "on-error": "#ffffff",
+        "primary-fixed-dim": "#b6c4ff",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#410002",
+        "surface-container": "#e7eeff",
+        "primary-fixed": "#dce1ff",
+        "surface-container-high": "#dee8ff",
+        "on-primary-fixed": "#00164e",
+        "on-primary-fixed-variant": "#264191",
+        "on-secondary-container": "#00714e",
+        "on-background": "#111c2d"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.75rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.5rem",
+        "margin": "2.5rem",
+        "space-md": "1.25rem",
+        "space-xl": "3rem",
+        "space-lg": "2rem"
+      },
+      "fontFamily": {
+        "body-md": ["Be Vietnam Pro"],
+        "headline-lg": ["Be Vietnam Pro"],
+        "label-md": ["Be Vietnam Pro"],
+        "body-xl": ["Be Vietnam Pro"],
+        "display-hero": ["Be Vietnam Pro"],
+        "hotline-display": ["Be Vietnam Pro"],
+        "body-lg": ["Be Vietnam Pro"],
+        "headline-sm": ["Be Vietnam Pro"],
+        "label-lg": ["Be Vietnam Pro"],
+        "headline-md": ["Be Vietnam Pro"]
+      },
+      "fontSize": {
+        "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+        "headline-lg": ["32px", {"lineHeight": "44px", "fontWeight": "700"}],
+        "label-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+        "body-xl": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+        "display-hero": ["40px", {"lineHeight": "52px", "fontWeight": "700"}],
+        "hotline-display": ["30px", {"lineHeight": "36px", "fontWeight": "800"}],
+        "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+        "headline-sm": ["22px", {"lineHeight": "32px", "fontWeight": "600"}],
+        "label-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+        "headline-md": ["26px", {"lineHeight": "38px", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background text-on-surface antialiased min-h-screen flex flex-col pt-safe pb-safe"><main class="flex-1 flex flex-col relative w-full px-gutter bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Accessibility Quick-Tune & Hotline Bar (Senior Friendly Rail) -->
+<div class="flex items-center justify-between bg-primary-container text-on-primary px-4 py-2.5 rounded-xl shadow-sm mb-3">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-label-md text-label-md text-on-primary">สายด่วนภัยไซเบอร์</span>
+</div>
+<a class="flex items-center space-x-1.5 bg-error text-on-error px-3 py-1.5 rounded-full font-label-md text-label-md shadow active:scale-95 transition-transform" href="tel:1441">
+<span class="material-symbols-outlined text-xl">phone_in_talk</span>
+<span class="font-bold tracking-wider">1441</span>
+</a>
+</div>
+<!-- App Header (Mock LINE style in Navy theme with clear senior typography) -->
+<header class="bg-primary text-on-primary rounded-2xl p-4 shadow-md mb-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<h1 class="font-headline-md text-headline-md tracking-wide">แชต (Chats)</h1>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-2.5 py-0.5 rounded-full">4</span>
+</div>
+<div class="flex items-center space-x-2">
+<!-- Audio Guidance Read Aloud Trigger -->
+<button class="flex items-center space-x-1 bg-surface-container-high/20 hover:bg-surface-container-high/30 text-on-primary px-3 py-1.5 rounded-full text-label-md font-label-md transition-colors" id="ttsButton" onclick="toggleAudioGuide()" title="กดเพื่อฟังเสียงอ่าน">
+<span class="material-symbols-outlined text-xl" id="speakerIcon">volume_up</span>
+<span class="hidden sm:inline" id="ttsLabel">อ่านออกเสียง</span>
+</button>
+<button aria-label="ค้นหาข้อความ" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-high/20 hover:bg-surface-container-high/30 active:scale-95 text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button aria-label="แก้ไขและจัดการแชต" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-high/20 hover:bg-surface-container-high/30 active:scale-95 text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">edit_square</span>
+</button>
+</div>
+</div>
+<!-- Senior High-Affordance Search Bar -->
+<div class="mt-3 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-2xl pointer-events-none">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md pl-11 pr-10 py-3 rounded-xl shadow-inner placeholder:text-outline focus:outline-none" placeholder="พิมพ์ชื่อลูกหลาน หรือค้นหาข้อความ..." type="text"/>
+<button aria-label="ล้างข้อความค้นหา" class="absolute right-3 text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-xl">cancel</span>
+</button>
+</div>
+</header>
+<!-- Pinned Official Safety Assistant (PakCheck) -->
+<section class="mb-3">
+<div class="flex items-center justify-between px-2 mb-1.5">
+<div class="flex items-center space-x-1.5 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+<span>ปักหมุดความปลอดภัย (บริการตรวจสอบฟรี)</span>
+</div>
+<span class="text-secondary font-label-md text-label-md flex items-center gap-0.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        พร้อมช่วย 24 ชม.
+      </span>
+</div>
+<!-- Pinned Chat Card -->
+<div class="bg-surface-variant text-on-surface p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden active:bg-surface-dim cursor-pointer">
+<div class="flex items-start space-x-3.5">
+<!-- PakCheck Shield Avatar -->
+<div class="relative flex-shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-primary-container to-secondary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+<!-- Verified Check Pill -->
+<div class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-0.5 shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-base font-bold">check_circle</span>
+</div>
+</div>
+<!-- Chat Details -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-0.5">
+<div class="flex items-center space-x-1.5 truncate">
+<h2 class="font-headline-sm text-headline-sm text-primary truncate">พักเช็ก (PakCheck)</h2>
+<span class="bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded text-xs font-bold flex-shrink-0">ทางการ</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold flex-shrink-0">ตอนนี้</span>
+</div>
+<div class="text-primary-container font-label-md text-label-md mb-1 truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-lg text-secondary">security</span>
+<span>ผู้ช่วยเช็กมิจฉาชีพ 24 ชม.</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 leading-relaxed">
+            แตะที่นี่เพื่อตรวจสายโทรเข้า สลิปโอนเงิน หรือส่งต่อข้อความสงสัย...
+          </p>
+<!-- Quick Action Buttons for Seniors -->
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="inline-flex items-center space-x-1 bg-surface-container-lowest text-primary px-3 py-1.5 rounded-lg shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-lg">image_search</span>
+<span>ส่งรูปสลิป</span>
+</span>
+<span class="inline-flex items-center space-x-1 bg-surface-container-lowest text-primary px-3 py-1.5 rounded-lg shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-lg">dialer_sip</span>
+<span>เช็กเบอร์แปลก</span>
+</span>
+</div>
+</div>
+<!-- Unread Badge & Pin Marker -->
+<div class="flex flex-col items-end space-y-2 flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+<span class="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center font-label-md text-label-md font-bold shadow">
+            1
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Separator Label -->
+<div class="px-2 py-1 flex items-center justify-between text-outline font-label-md text-label-md mb-1">
+<span>แชตครอบครัวและคนสนิท</span>
+<span class="text-xs">เรียงตามเวลาล่าสุด</span>
+</div>
+<!-- Family Chat Rows List -->
+<div class="flex flex-col space-y-2.5">
+<!-- Chat Item 1: Daughter -->
+<a href="line-official-account.html" class="block cursor-pointer"><div class="bg-surface-container-lowest text-on-surface p-4 rounded-2xl shadow-sm hover:shadow active:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center space-x-3.5">
+<!-- Avatar Photo Placeholder -->
+<div class="relative flex-shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow" data-alt="Portrait photo of an affectionate Thai adult daughter smiling warmly outdoors, soft daylight natural background, friendly expression suitable for elder caregiver family member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9fWbiJnPmPjczUoeaLu9t-puNOIi-5QjL7hfTtLL-sG5w_jKrwqZGkDae04ckNxXk8n7t8XbGMGbbARoRNWxqw1bXXhT2J-D8gtR33CgtJ5JSsBMCbIoIPfep116O6gk9xYTkBU7hL9neRDijLbUO1OqeECxMiw7wg56M7nJLheSe5APK6YSnkG1NEVfLBvhyPOszgZfQCKSMX-x0WWkvT4qAf9ScIDl1208T5zqV"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm truncate text-on-surface">ลูกสาว (น้องเมย์)</h3>
+<span class="font-body-md text-body-md text-outline flex-shrink-0 ml-2">10:15</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant truncate">
+            แม่ทานข้าวหรือยังคะ อย่าลืมกินยานะ
+          </p>
+</div>
+</div>
+</div>
+<!-- Chat Item 2: Warm Family Group -->
+<div class="bg-surface-container-lowest text-on-surface p-4 rounded-2xl shadow-sm hover:shadow active:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center space-x-3.5">
+<!-- Group Avatar Placeholder (warm floral theme) -->
+<div class="relative flex-shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow" data-alt="Vibrant bright orange marigold and zinnia flowers blooming in a gentle sunny Thai morning garden, cheerful and warm greeting tone, clean photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNzP0zx2uPMFE3PDsne6owfMAS0Ru0RPMJGSkb6qjbHw48veEeIlQ6RHhajCfGd410iYMt54VH7NUeLYT_XeI8SLdSvBm1zVp3ILSRE-W5lUqQV5FqcYT3eqEhhEa9MwyYq1X_FE3_EQ5XgbCfGCE7GodE4Bxcq5_H-_BNpcNt8JmNJzciHXU98Xf-Ex4ab6by_B2VDdyspcsLsMdlqub69gVhBU4oW1Q4udsJQodC"/>
+<span class="absolute -top-1 -right-1 bg-surface-container-high text-primary p-1 rounded-full shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-sm font-bold">groups</span>
+</span>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center space-x-1 truncate">
+<h3 class="font-headline-sm text-headline-sm truncate text-on-surface">กลุ่มครอบครัวอบอุ่น</h3>
+<span class="text-error text-lg flex-shrink-0">❤️</span>
+</div>
+<span class="font-body-md text-body-md text-outline flex-shrink-0 ml-2">08:30</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant truncate flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-xl">image</span>
+<span>ส่งรูปสวัสดีวันพฤหัสบดี ดอกไม้สีส้ม</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Chat Item 3: Granddaughter Nan -->
+<div class="bg-surface-container-lowest text-on-surface p-4 rounded-2xl shadow-sm hover:shadow active:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center space-x-3.5">
+<!-- Granddaughter Photo Placeholder -->
+<div class="relative flex-shrink-0">
+<img class="w-16 h-16 rounded-full object-cover shadow" data-alt="Portrait of a cheerful young Thai granddaughter with polite bright smile wearing casual pastel cardigan, studio soft lighting, warm gentle family tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Z5HamD-ypGDkmD_CvF-Yrf1iMmZHZGNPdTkcUUiAXF72fqL8saGhMVsjmZDyEUHl919WFO3zLWFHzTxqxKbM47CgJeuTSOvQs-DRHj3eSUkTRq3zqIeRfxi8figDwYnwdXBdBNJ4BHQz4Gqy8_SlAtI1UbAKEfFv2jXOp1oiZuSgNlqOZG0kaLqm_i610udmxPEjooNg4rcJS7dsmY7Ge_IM4GShl2u2oV8pfpdD"/>
+</div>
+<!-- Chat Content -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-sm text-headline-sm truncate text-on-surface">หลานแนน</h3>
+<span class="font-body-md text-body-md text-outline flex-shrink-0 ml-2">เมื่อวาน</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant truncate">
+            เสาร์นี้หนูแวะไปหานะคะยาย
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Senior Help Card (Assurance Banner) -->
+<div class="mt-4 bg-surface-container text-on-surface p-4 rounded-2xl flex items-start space-x-3 shadow-sm">
+<span class="material-symbols-outlined text-primary text-3xl flex-shrink-0 mt-0.5">help_outline</span>
+<div class="flex-1 text-on-surface">
+<h4 class="font-label-lg text-label-lg font-bold text-primary">หากมีข้อความแปลกใจหรือน่าสงสัย?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+        กดค้างที่ข้อความนั้น แล้วเลือก <strong class="text-primary font-bold">"ส่งต่อ (Forward)"</strong> มาที่ห้องแชต <strong class="text-primary font-bold">พักเช็ก</strong> ได้ทันที
+      </p>
+</div>
+</div>
+</div></a>
+<script>
+  let isPlayingVoice = false;
+
+  function toggleAudioGuide() {
+    isPlayingVoice = !isPlayingVoice;
+    const btn = document.getElementById('ttsButton');
+    const label = document.getElementById('ttsLabel');
+    const icon = document.getElementById('speakerIcon');
+
+    if (isPlayingVoice) {
+      icon.innerText = 'graphic_eq';
+      label.innerText = 'กำลังอ่าน...';
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+
+      // Native speech synthesis announcement in Thai if supported
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const textToRead = 'รายการแชตของคุณ มีข้อความใหม่จาก พักเช็ก ผู้ช่วยเช็กมิจฉาชีพ 24 ชั่วโมง และข้อความจากลูกสาวน้องเมย์ค่ะ';
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'th-TH';
+        utterance.rate = 0.9;
+        utterance.onend = () => {
+          resetTtsUI();
+        };
+        window.speechSynthesis.speak(utterance);
+      } else {
+        setTimeout(resetTtsUI, 4000);
+      }
+    } else {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+      resetTtsUI();
+    }
+  }
+
+  function resetTtsUI() {
+    isPlayingVoice = false;
+    const btn = document.getElementById('ttsButton');
+    const label = document.getElementById('ttsLabel');
+    const icon = document.getElementById('speakerIcon');
+    if (icon) icon.innerText = 'volume_up';
+    if (label) label.innerText = 'อ่านออกเสียง';
+    if (btn) btn.classList.remove('bg-secondary', 'text-on-secondary');
+  }
+</script></main><!-- Floating Simulator Quick Nav -->
+<div class="fixed bottom-2 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2.5 text-[11px] font-bold border border-white/20 select-none">
+  <a href="home-call-banner.html" class="hover:text-emerald-400 transition-colors">📞 หน้าแรก</a>
+  <span class="text-slate-600">|</span>
+  <a href="safe-step-mobile.html" class="hover:text-emerald-400 transition-colors">🛡️ SAFE STEP</a>
+  <span class="text-slate-600">|</span>
+  <a href="urgent-warning-mobile.html" class="hover:text-rose-400 transition-colors">🚨 เตือนภัย</a>
+  <span class="text-slate-600">|</span>
+  <a href="line-official-account.html" class="hover:text-emerald-400 transition-colors">💬 LINE OA</a>
+  <span class="text-slate-600">|</span>
+  <a href="../simulator.html" target="_top" class="text-amber-300 hover:text-amber-200">🖥️ ควบคุม</a>
+</div>
+</body></html>
