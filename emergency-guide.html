@@ -1,0 +1,519 @@
+﻿<!DOCTYPE html><html class="scroll-smooth" lang="th"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>พักเช็ก (PakCheck) - พัก 10 วิ เช็กให้ชัวร์ ก่อนโอนหรือกดลิงก์</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#00236f","on-primary":"#ffffff","primary-container":"#1e3a8a","on-secondary-container":"#00714e","error":"#ba1a1a","on-error":"#ffffff","surface-container":"#e7eeff","surface-dim":"#cfdaf2","outline":"#757682","tertiary-container":"#87000a","tertiary-fixed-dim":"#ffb4ab","inverse-primary":"#b6c4ff","on-tertiary":"#ffffff","on-tertiary-container":"#ff8b80","background":"#f9f9ff","secondary-fixed-dim":"#68dba9","surface":"#f9f9ff","surface-variant":"#d8e3fb","surface-container-high":"#dee8ff","secondary-container":"#82f5c1","on-tertiary-fixed-variant":"#93000b","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#264191","outline-variant":"#c5c5d3","surface-container-lowest":"#ffffff","error-container":"#ffdad6","on-surface":"#111c2d","primary-fixed-dim":"#b6c4ff","on-background":"#111c2d","on-surface-variant":"#444651","surface-container-highest":"#d8e3fb","inverse-on-surface":"#ecf1ff","on-secondary-fixed":"#002114","surface-tint":"#4059aa","on-primary-fixed":"#00164e","on-secondary-fixed-variant":"#005137","on-tertiary-fixed":"#410002","secondary":"#006c4a","on-secondary":"#ffffff","tertiary":"#5d0004","primary-fixed":"#dce1ff","tertiary-fixed":"#ffdad6","on-primary-container":"#90a8ff","inverse-surface":"#263143","secondary-fixed":"#85f8c4","on-error-container":"#93000a","surface-bright":"#f9f9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.5rem","space-lg":"2rem","space-xs":"0.5rem","space-xl":"3rem","space-sm":"0.75rem","space-md":"1.25rem","margin":"2.5rem"},fontFamily:{"display-hero":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"body-xl":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"hotline-display":["Be Vietnam Pro"]},fontSize:{"display-hero":["40px",{"lineHeight":"52px","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"44px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"headline-md":["26px",{"lineHeight":"38px","fontWeight":"600"}],"label-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"hotline-display":["30px",{"lineHeight":"36px","fontWeight":"800"}]}}}};</script></head><body class="bg-surface font-body-lg text-body-lg text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="max-w-[1280px] mx-auto px-gutter h-24 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-md"><span class="material-symbols-outlined text-[28px]">verified_user</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">พักเช็ก</span><span class="font-label-md text-label-md text-on-surface-variant font-medium">(PakCheck)</span></div><span class="font-body-md text-body-md text-on-surface-variant hidden lg:inline">พัก 10 วิ เช็กให้ชัวร์ ก่อนโอนหรือกดลิงก์</span></div></div><nav class="hidden xl:flex items-center gap-2 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant/30"><a class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface hover:text-primary hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap" data-path="quick-scan" href="index.html"><span class="material-symbols-outlined text-[20px]">security</span><span>หน้าแรก (ตรวจด่วน)</span></a><a class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface hover:text-primary hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap" data-path="safe-step" href="safe-step.html"><span class="material-symbols-outlined text-[20px]">checklist</span><span>ตัวช่วย SAFE STEP</span></a><a class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface hover:text-primary hover:bg-surface-container transition-all font-label-md text-label-md whitespace-nowrap" data-path="support-radar" href="support-radar.html"><span class="material-symbols-outlined text-[20px]">radar</span><span>สะกิดครอบครัว &amp; เรดาร์</span></a><a aria-current="page" class="flex items-center gap-2 px-space-md py-2.5 bg-primary-container text-on-primary rounded-lg font-label-md text-label-md font-bold shadow-sm transition-all whitespace-nowrap" data-path="emergency-guide" href="emergency-guide.html"><span class="material-symbols-outlined text-[20px]">emergency_home</span><span>คู่มือกู้ชีพ ฉุกเฉิน 1441</span></a></nav><div class="flex items-center gap-space-sm shrink-0"><div class="hidden sm:flex items-center bg-surface-container-low rounded-lg p-1 gap-1 border border-outline-variant/30" title="ปรับขนาดตัวอักษร"><button class="w-9 h-9 flex items-center justify-center rounded-md font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" type="button">ก-</button><button class="w-9 h-9 flex items-center justify-center rounded-md font-label-lg text-label-lg font-bold text-on-surface bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.06)]" type="button">ก</button><button class="w-9 h-9 flex items-center justify-center rounded-md font-headline-sm text-headline-sm text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" type="button">ก+</button></div><button class="hidden md:flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container rounded-lg text-primary hover:bg-primary-fixed transition-colors font-label-md text-label-md" title="ฟังเสียงอ่านทั้งหน้า" type="button"><span class="material-symbols-outlined text-[22px]">volume_up</span><span class="font-label-md text-label-md whitespace-nowrap">ฟังเสียงอ่าน</span></button><a class="flex items-center gap-space-xs px-space-md py-2.5 bg-error text-on-error rounded-lg hover:bg-tertiary-container shadow-[0_2px_8px_rgba(186,26,26,0.25)] transition-transform active:scale-95 group" href="tel:1441"><div class="w-9 h-9 rounded-md bg-white/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px] animate-pulse">phone_in_talk</span></div><div class="flex flex-col text-left pr-1"><span class="font-label-md text-[13px] font-bold leading-tight">โทรสายด่วน</span><div class="flex items-baseline gap-1.5"><span class="font-headline-sm text-headline-sm font-bold text-on-error leading-none">AOC 1441</span><span class="font-body-md text-[13px] text-white/90 hidden sm:inline whitespace-nowrap">โทรฟรี 24 ชม.</span></div></div></a></div></div></header>
+<div id="mobile-menu" class="hidden fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest shadow-xl border-b border-outline-variant/30 xl:hidden">
+<nav class="max-w-[1280px] mx-auto px-gutter py-space-sm flex flex-col gap-1">
+<a href="index.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">search_check</span><span>หน้าแรก (ตรวจด่วน)</span></a>
+<a href="safe-step.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">shield</span><span>ตัวช่วย SAFE STEP</span></a>
+<a href="support-radar.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">family_restroom</span><span>สะกิดครอบครัว &amp; เรดาร์</span></a>
+<a href="emergency-guide.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">emergency_home</span><span>คู่มือกู้ชีพ ฉุกเฉิน 1441</span></a>
+</nav>
+</div><main class="w-full pt-24 min-h-[calc(100vh-140px)] bg-surface"><div class="flex flex-col w-full">
+<!-- Top Emergency Triage Banner -->
+<section class="w-full bg-gradient-to-r from-tertiary via-error to-primary text-on-error py-space-md shadow-xl relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-on-error/20 flex items-center justify-center shrink-0 animate-pulse">
+<span class="material-symbols-outlined text-on-error text-[28px]">emergency_home</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-white/20 font-label-md text-label-md text-on-error uppercase tracking-wider">ฉุกเฉินระดับ 1</span>
+<span class="font-body-md text-body-md text-white/90">มีผลทางกฎหมายตาม พ.ร.ก. ปราบปรามอาชญากรรมทางเทคโนโลยีฯ</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-error tracking-tight">
+            พลาดโอนเงินหรือเผลอกดลิงก์ไปแล้ว? <span class="text-tertiary-fixed font-black underline decoration-2">อย่าตกใจ ทำตาม 3 ลำดับนี้ทันที</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="group flex items-center gap-space-sm px-space-lg py-3.5 bg-surface-container-lowest text-error rounded-full hover:bg-white shadow-2xl transition-all transform active:scale-95" href="tel:1441">
+<div class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold text-on-surface-variant leading-none">ศูนย์ AOC สายด่วน</span>
+<span class="font-hotline-display text-hotline-display text-error leading-tight font-black">1441</span>
+</div>
+<span class="font-label-md text-label-md px-2.5 py-1 rounded-full bg-error-container text-on-error-container ml-1">โทรฟรี 24 ชม.</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Reassurance & Quick Assistant Bar -->
+<section class="w-full bg-surface-container-low py-space-sm shadow-sm">
+<div class="max-w-[1280px] mx-auto px-gutter flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-2 px-space-md py-2.5 bg-primary-container text-on-primary rounded-full hover:bg-primary transition-all shadow-sm" id="audio-guide-btn" onclick="toggleEmergencyAudio()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="audio-icon">volume_up</span>
+<span class="font-label-md text-label-md" id="audio-label">ฟังเสียงแนะนำขั้นตอนกู้ชีพทีละข้อ</span>
+<span class="flex items-center gap-0.5 ml-1">
+<span class="w-1 h-3 bg-white/70 rounded-full animate-bounce"></span>
+<span class="w-1 h-4 bg-white rounded-full animate-bounce [animation-delay:0.15s]"></span>
+<span class="w-1 h-2 bg-white/70 rounded-full animate-bounce [animation-delay:0.3s]"></span>
+</span>
+</button>
+<div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-[20px]">timelapse</span>
+<span>เวลาทอง (Golden Hour): แจ้งอายัดภายใน <strong>10 - 30 นาทีแรก</strong> เพื่อสกัดกั้นเส้นทางเงิน</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-highest text-primary hover:bg-surface-container rounded-full font-label-md text-label-md transition-colors" onclick="shareFamilyLocationAlert()" type="button">
+<span class="material-symbols-outlined text-[20px]">send_to_mobile</span>
+<span>ส่งสัญญาณแจ้งลูกหลาน / ครอบครัว</span>
+</button>
+<button class="flex items-center gap-space-xs px-3 py-2.5 bg-surface-container text-on-surface hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors" onclick="window.print()" title="พิมพ์หน้านี้" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Recovery Workflow Grid -->
+<main class="w-full max-w-[1280px] mx-auto px-gutter py-space-xl flex flex-col gap-space-xl">
+<!-- Visual Progress Stage -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-error text-on-error flex items-center justify-center font-display-hero text-display-hero shrink-0 font-bold">1</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-md text-label-md text-error font-bold uppercase">ด่วนที่สุด (ทันที)</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">โทรอายัดบัญชีธนาคาร</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ระงับบัญชีม้าปลายทาง</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary text-on-primary flex items-center justify-center font-display-hero text-display-hero shrink-0 font-bold">2</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold uppercase">ขั้นตอนที่ 2</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">บันทึกสลิปและหลักฐาน</span>
+<span class="font-body-md text-body-md text-on-surface-variant">e-Slip, แคปแชต, เบอร์โทร</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary text-on-secondary flex items-center justify-center font-display-hero text-display-hero shrink-0 font-bold">3</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase">ขั้นตอนที่ 3</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">แจ้งความออนไลน์ ตร.</span>
+<span class="font-body-md text-body-md text-on-surface-variant">thaipoliceonline.go.th</span>
+</div>
+</div>
+</div>
+<!-- STEP 1: Bank Freeze Center -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-lg flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-error-container/40 p-space-md rounded-xl">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">lock_clock</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md font-bold text-tertiary">
+              1. ล็อกและโทรอายัดบัญชีธนาคารปลายทางและตนเองทันที
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface">
+              ตาม <span class="font-bold underline">พ.ร.ก. มาตรการป้องกันและปราบปรามอาชญากรรมทางเทคโนโลยี พ.ศ. 2566</span> ท่านมีสิทธิสั่งระงับบัญชีปลายทางได้ชั่วคราวทันทีผ่านสายด่วนเฉพาะกิจ
+            </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-sm shrink-0 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">คำพูดที่ต้องแจ้งเจ้าหน้าที่ธนาคารทันที:</span>
+<span class="font-body-md text-body-md text-error font-bold">
+            "ขอระงับบัญชีปลายทางเนื่องจากถูกหลอกโอนเงินภัยออนไลน์ ขอเลข Bank Case ID ทันที"
+          </span>
+</div>
+</div>
+<!-- Bank Hotlines Directory Grid (8 Major Banks) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_balance</span>
+            เลือกธนาคารของท่านเพื่อโทรออกทันที (สายด่วนเหตุทุจริต 24 ชั่วโมง)
+          </span>
+<span class="font-body-md text-body-md text-on-surface-variant">กดปุ่มโทรสีแดงเพื่อโทรออก</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- KBank -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-lg shrink-0">KB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">กสิกรไทย (KBank)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">แจ้งภัยมิจฉาชีพ 24 ชม.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">02-888-8888</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:028888888">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- SCB -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-bold text-label-lg shrink-0">SCB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ไทยพาณิชย์ (SCB)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ศูนย์รับแจ้งเหตุภัยออนไลน์</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">02-777-7575</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:027777575">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- KTB -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-variant text-primary flex items-center justify-center font-bold text-label-lg shrink-0">KTB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">กรุงไทย (Krungthai)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">สายด่วนระงับธุรกรรม</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">02-111-1111</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:021111111">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- BBL -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold text-label-lg shrink-0">BBL</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">กรุงเทพ (Bangkok Bank)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">แจ้งระงับบัญชีด่วน</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1333</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:1333">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- BAY -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center font-bold text-label-lg shrink-0">BAY</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">กรุงศรีอยุธยา</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Hotline อาชญากรรมไซเบอร์</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1572</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:1572">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- TTB -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-dim text-on-surface flex items-center justify-center font-bold text-label-lg shrink-0">TTB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ทีทีบี (ttb bank)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">สายด่วนอายัดธุรกรรมทันที</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1428</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:1428">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- GSB -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-lg shrink-0">GSB</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ออมสิน (GSB)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ศูนย์รับแจ้งภัยทางการเงิน</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1115</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:1115">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+<!-- BAAC -->
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col justify-between gap-space-sm shadow-sm transition-all hover:-translate-y-0.5">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-label-lg shrink-0">BAAC</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ธ.ก.ส. (BAAC)</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ศูนย์คุ้มครองและอายัดบัญชี</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">02-555-0555</span>
+<a class="px-space-md py-2 bg-error text-on-error rounded-full font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform" href="tel:025550555">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                โทรเลย
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bank Case ID Tracker Prompt -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[32px]">assignment_turned_in</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-primary">จดบันทึกเลขเคสจากธนาคาร (Bank Case ID)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">เมื่อโทรอายัดเสร็จ ธนาคารจะมอบชุดรหัสอ้างอิงเพื่อนำไปกรอกในระบบแจ้งความ ตร. ภายใน 72 ชั่วโมง</p>
+</div>
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto">
+<input class="px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-lg text-body-lg shadow-inner w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary" id="bank-case-input" placeholder="พิมพ์เลข Case ID ที่นี่..." type="text">
+<button class="px-space-md py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md shrink-0 hover:bg-primary-container transition-colors" onclick="saveCaseIdLocally()" type="button">
+            บันทึกรหัส
+          </button>
+</div>
+</div>
+</section>
+<!-- STEP 2: Evidence Checklist & One-Click PDF Prep -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-lg flex flex-col gap-space-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">document_scanner</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">
+            2. รวบรวมสลิปและแคปหน้าจอหลักฐานสำคัญ
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            หลักฐานดิจิทัลมีผลสำคัญยิ่งต่อการขออนุมัติหมายอายัดถาวรและการติดตามบัญชีม้าแถว 1-5
+          </p>
+</div>
+</div>
+<!-- Interactive Evidence Checklist -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Item 1 -->
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[28px]">receipt_long</span>
+<input checked="" class="w-6 h-6 rounded accent-primary text-primary focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">สลิปโอนเงินที่มี e-Slip / QR</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ต้องมองเห็นเลขที่รายการ (Transaction ID), ชื่อบัญชีผู้รับ, วันและเวลาโอนครบถ้วน</span>
+</label>
+<!-- Item 2 -->
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[28px]">chat</span>
+<input checked="" class="w-6 h-6 rounded accent-primary text-primary focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">ข้อความแชต LINE / Facebook</span>
+<span class="font-body-md text-body-md text-on-surface-variant">แคปหน้าจอตั้งแต่ข้อความแรกที่มิจฉาชีพทักมา จนถึงขั้นตอนส่งลิงก์หรือบอกให้โอนเงิน</span>
+</label>
+<!-- Item 3 -->
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary-container text-[28px]">phone_callback</span>
+<input class="w-6 h-6 rounded accent-primary text-primary focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">เบอร์โทรและลิงก์เว็บไซต์</span>
+<span class="font-body-md text-body-md text-on-surface-variant">หมายเลขโทรศัพท์ที่โทรเข้ามา, ชื่อผู้ใช้ในโซเชียล และ URL เว็บปลอมที่เผลอกดเข้าไป</span>
+</label>
+</div>
+<!-- Quick Action Tool: Summary Document Generator -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md p-space-md bg-surface-variant rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[36px]">picture_as_pdf</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">เครื่องมือสร้างสรุปสำนวนเอกสารแจ้งความ</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ระบบจะจัดเรียงข้อมูลวัน เวลา เลขที่บัญชี และรายการสิ่งที่ต้องเตรียมให้พร้อมเซ็น</span>
+</div>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-3.5 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary-container shadow-md transition-all active:scale-95" onclick="generateCaseSummaryPdf()" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>สร้างใบลำดับเหตุการณ์เตรียมแจ้งความ</span>
+</button>
+</div>
+</section>
+<!-- STEP 3: Royal Thai Police Online Filing -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-lg flex flex-col gap-space-lg">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">policy</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-secondary">
+            3. แจ้งความออนไลน์กับสำนักงานตำรวจแห่งชาติ (ตร.)
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            หลังอายัดบัญชีแล้ว ต้องยื่นแจ้งความออนไลน์ภายใน 72 ชม. เพื่อออกหมายเรียกและดำเนินคดีตามกระบวนการกฎหมาย
+          </p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg items-center">
+<!-- Official Link Box -->
+<div class="flex flex-col gap-space-md p-space-lg bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md font-bold uppercase">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            ช่องทางแจ้งความออนไลน์อย่างเป็นทางการแห่งเดียวเท่านั้น
+          </div>
+<div class="flex flex-col">
+<span class="font-display-hero text-display-hero font-bold text-primary tracking-tight">thaipoliceonline.go.th</span>
+<span class="font-body-md text-body-md text-on-surface-variant">ศูนย์รับแจ้งความออนไลน์ อาชญากรรมทางเทคโนโลยี สำนักงานตำรวจแห่งชาติ</span>
+</div>
+<a class="flex items-center justify-center gap-2 px-space-lg py-4 bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm font-bold shadow-md hover:bg-primary-container transition-transform active:scale-95 text-center" href="https://www.thaipoliceonline.go.th" rel="noopener noreferrer" target="_blank">
+<span>เข้าสู่ระบบแจ้งความออนไลน์ (คลิก)</span>
+<span class="material-symbols-outlined">open_in_new</span>
+</a>
+<span class="font-body-md text-body-md text-on-surface-variant text-center">หรือเดินทางไปยังสถานีตำรวจท้องที่ที่สะดวกได้ตลอด 24 ชั่วโมง</span>
+</div>
+<!-- Strict Warning: Fake Lawyer Warning Box -->
+<div class="flex flex-col gap-space-sm p-space-lg bg-tertiary-fixed/30 rounded-xl">
+<div class="flex items-center gap-2 text-error font-bold font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+            ข้อควรระวังสำคัญที่สุด: ระวังมิจฉาชีพซ้ำซ้อน!
+          </div>
+<ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0">close</span>
+<span><strong>อย่าหลงเชื่อ</strong> เพจ Facebook ที่อ้างตัวเป็น “ทนายอาสา” หรือ “กลุ่มช่วยเหลือเหยื่อไซเบอร์รับดึงเงินคืน”</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0">close</span>
+<span><strong>เจ้าหน้าที่ตำรวจและธนาคารตัวจริง</strong> จะไม่มีวันให้โอนเงินค่าธรรมเนียมหรือค้ำประกันเพื่อดึงเงินคืนเด็ดขาด</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">check_circle</span>
+<span>ติดต่อผ่าน AOC 1441 และเว็บ thaipoliceonline.go.th เท่านั้น ไม่มีช่องทาง LINE ส่วนตัว</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Support Ecosystem & Next Steps Infographic -->
+<section class="bg-surface-container-high rounded-xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[36px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">ต้องการคนพูดคุยหรือช่วยแนะนำขั้นตอนเพิ่มเติม?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            โทรปรึกษาสายด่วนสุขภาพจิต กรมสุขภาพจิต ได้ฟรีที่ <strong>1323</strong> (24 ชม.) หากรู้สึกกังวลใจหรือตกใจเกินไป
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto">
+<a class="w-full md:w-auto text-center px-space-lg py-3 bg-surface-container-lowest text-on-surface hover:bg-white rounded-xl font-label-md text-label-md font-bold shadow-sm transition-colors" href="tel:1323">
+          โทร 1323 ปรึกษาสุขภาพจิต
+        </a>
+</div>
+</section>
+</main>
+<!-- Modal / Floating Toast Simulation for Action Feedback -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-2xl flex items-center gap-space-sm" id="status-toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-message">ข้อมูลได้รับการบันทึกแล้ว</span>
+</div>
+</div>
+<script>
+  let isSpeaking = false;
+  let synth = window.speechSynthesis;
+
+  function toggleEmergencyAudio() {
+    const btnLabel = document.getElementById('audio-label');
+    const btnIcon = document.getElementById('audio-icon');
+
+    if (!('speechSynthesis' in window)) {
+      showToast('เบราว์เซอร์ไม่รองรับระบบอ่านออกเสียงอัตโนมัติ');
+      return;
+    }
+
+    if (isSpeaking) {
+      synth.cancel();
+      isSpeaking = false;
+      btnLabel.textContent = 'ฟังเสียงแนะนำขั้นตอนกู้ชีพทีละข้อ';
+      btnIcon.textContent = 'volume_up';
+    } else {
+      const urgentGuideThaiText = "คู่มือกู้ชีพฉุกเฉิน พักเช็ก หากท่านพลาดโอนเงินหรือกดลิงก์ไปแล้ว ข้อ 1 ให้รีบโทรอายัดบัญชีปลายทางและของตนเองทันที ผ่านศูนย์สายด่วน AOC 1441 หรือโทรเบอร์ธนาคารของท่านทันที ภายใน 10 ถึง 30 นาทีแรก ข้อ 2 ให้แคปเจอร์หน้าจอและสลิปการโอนที่มีคิวอาร์โค้ด และประวัติแชตทั้งหมดไว้เป็นหลักฐาน ข้อ 3 แจ้งความออนไลน์ผ่านเว็บไซต์ ไทยโพลิสออนไลน์ ดอต จีโอ ดอต ทีเอช ระวังอย่าหลงเชื่อมิจฉาชีพทนายปลอมในเฟซบุ๊กเด็ดขาด";
+      
+      const utterThis = new SpeechSynthesisUtterance(urgentGuideThaiText);
+      utterThis.lang = 'th-TH';
+      utterThis.rate = 0.95;
+
+      utterThis.onend = function() {
+        isSpeaking = false;
+        btnLabel.textContent = 'ฟังเสียงแนะนำขั้นตอนกู้ชีพทีละข้อ';
+        btnIcon.textContent = 'volume_up';
+      };
+
+      synth.speak(utterThis);
+      isSpeaking = true;
+      btnLabel.textContent = 'กำลังอ่านคำแนะนำฉุกเฉิน...';
+      btnIcon.textContent = 'volume_off';
+    }
+  }
+
+  function saveCaseIdLocally() {
+    const input = document.getElementById('bank-case-input');
+    const val = input.value.trim();
+    if (val) {
+      localStorage.setItem('pakcheck_case_id', val);
+      showToast('บันทึก Bank Case ID เรียบร้อย: ' + val);
+    } else {
+      showToast('กรุณากรอกรหัสเคสจากธนาคาร');
+    }
+  }
+
+  function shareFamilyLocationAlert() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'แจ้งเตือนฉุกเฉินจากคนในครอบครัว (พักเช็ก)',
+        text: 'ฉันเพิ่งทำธุรกรรมต้องสงสัย ตอนนี้กำลังประสานงานศูนย์ AOC 1441 ขอให้คนในครอบครัวช่วยติดต่อฉันด้วย',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText('แจ้งเตือนฉุกเฉิน: ฉันเพิ่งทำธุรกรรมต้องสงสัย กำลังโทร 1441 โปรดโทรหาฉันด่วน!');
+      showToast('คัดลอกข้อความแจ้งเตือนครอบครัวลงคลิปบอร์ดแล้ว');
+    }
+  }
+
+  function generateCaseSummaryPdf() {
+    window.print();
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('status-toast');
+    const label = document.getElementById('toast-message');
+    if (!toast || !label) return;
+    label.textContent = msg;
+    toast.classList.remove('translate-y-32');
+    setTimeout(() => {
+      toast.classList.add('translate-y-32');
+    }, 3500);
+  }
+
+  // Pre-load saved case id if exists
+  window.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem('pakcheck_case_id');
+    const input = document.getElementById('bank-case-input');
+    if (saved && input) {
+      input.value = saved;
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-2px_12px_rgba(0,0,0,0.04)] pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[32px]">verified_user</span><span class="font-headline-sm text-headline-sm text-primary font-bold">พักเช็ก ปลอดภัย มั่นใจได้</span></div><p class="font-body-md text-body-md text-on-surface-variant">ออกแบบตามหลักสากลเพื่อผู้สูงวัยและครอบครัวไทย ไม่ต้องล็อกอิน ไม่จำประวัติ ปลอดภัยขั้นสูงสุดด้วยหลักการ Privacy by Design</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">lock_open_right</span><span class="font-label-md text-label-md text-secondary font-semibold">ไม่เก็บข้อมูลส่วนบุคคลและประวัติการตรวจสอบ</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">เครือข่ายความร่วมมือภาครัฐ</h3><p class="font-body-md text-body-md text-on-surface-variant">ระบบตรวจสอบและเชื่อมต่อมาตรการร่วมกับหน่วยงานเพื่อความปลอดภัยทางไซเบอร์แห่งชาติ</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">สำนักงานตำรวจแห่งชาติ</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">ศูนย์ AOC 1441</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">depa</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">สสส.</div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">เบอร์ฉุกเฉินรับแจ้งเหตุ 24 ชม.</h3><div class="flex flex-col gap-space-xs"><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">สายด่วนภัยออนไลน์ AOC</span><span class="font-headline-sm text-headline-sm text-error font-bold">1441</span></div><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">ตำรวจสอบสวนกลาง (CIB)</span><span class="font-headline-sm text-headline-sm text-primary font-bold">1195</span></div><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">ศูนย์คุ้มครองผู้บริโภคทางการเงิน</span><span class="font-headline-sm text-headline-sm text-primary font-bold">1213</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left"><p class="font-body-md text-body-md text-on-surface-variant">© 2025 พักเช็ก (PakCheck) - แพลตฟอร์มคุ้มครองความปลอดภัยดิจิทัลเพื่อประชาชนไทย</p><div class="flex items-center gap-space-md font-body-md text-body-md text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">ข้อกำหนดการใช้งาน</a><a class="hover:text-primary transition-colors" href="#">นโยบายความเป็นส่วนตัว</a><a class="hover:text-primary transition-colors" href="#">ช่วยเหลือและแนะนำติชม</a></div></div></div></footer>
+
+</body></html>

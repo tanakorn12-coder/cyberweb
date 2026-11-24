@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html><html class="scroll-smooth" lang="th"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>พักเช็ก (PakCheck) - พัก 10 วิ เช็กให้ชัวร์ ก่อนโอนหรือกดลิงก์</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#00236f","on-primary":"#ffffff","primary-container":"#1e3a8a","on-secondary-container":"#00714e","error":"#ba1a1a","on-error":"#ffffff","surface-container":"#e7eeff","surface-dim":"#cfdaf2","outline":"#757682","tertiary-container":"#87000a","tertiary-fixed-dim":"#ffb4ab","inverse-primary":"#b6c4ff","on-tertiary":"#ffffff","on-tertiary-container":"#ff8b80","background":"#f9f9ff","secondary-fixed-dim":"#68dba9","surface":"#f9f9ff","surface-variant":"#d8e3fb","surface-container-high":"#dee8ff","secondary-container":"#82f5c1","on-tertiary-fixed-variant":"#93000b","surface-container-low":"#f0f3ff","on-primary-fixed-variant":"#264191","outline-variant":"#c5c5d3","surface-container-lowest":"#ffffff","error-container":"#ffdad6","on-surface":"#111c2d","primary-fixed-dim":"#b6c4ff","on-background":"#111c2d","on-surface-variant":"#444651","surface-container-highest":"#d8e3fb","inverse-on-surface":"#ecf1ff","on-secondary-fixed":"#002114","surface-tint":"#4059aa","on-primary-fixed":"#00164e","on-secondary-fixed-variant":"#005137","on-tertiary-fixed":"#410002","secondary":"#006c4a","on-secondary":"#ffffff","tertiary":"#5d0004","primary-fixed":"#dce1ff","tertiary-fixed":"#ffdad6","on-primary-container":"#90a8ff","inverse-surface":"#263143","secondary-fixed":"#85f8c4","on-error-container":"#93000a","surface-bright":"#f9f9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.5rem","space-lg":"2rem","space-xs":"0.5rem","space-xl":"3rem","space-sm":"0.75rem","space-md":"1.25rem","margin":"2.5rem"},fontFamily:{"display-hero":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"body-xl":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"hotline-display":["Be Vietnam Pro"]},fontSize:{"display-hero":["40px",{"lineHeight":"52px","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"44px","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"26px","fontWeight":"400"}],"label-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-xl":["20px",{"lineHeight":"32px","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"32px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"30px","fontWeight":"400"}],"headline-md":["26px",{"lineHeight":"38px","fontWeight":"600"}],"label-lg":["18px",{"lineHeight":"26px","fontWeight":"600"}],"hotline-display":["30px",{"lineHeight":"36px","fontWeight":"800"}]}}}};</script></head><body class="bg-surface font-body-lg text-body-lg text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-outline-variant/30 shadow-sm"><div class="min-h-[76px] max-w-[1280px] mx-auto px-gutter py-2 flex flex-wrap items-center justify-between gap-space-sm">
+    <!-- Brand Section (Left) -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm shrink-0">
+        <span class="material-symbols-outlined text-[28px]">verified_user</span>
+      </div>
+      <div class="flex flex-col justify-center leading-tight">
+        <div class="flex items-center gap-1.5">
+          <span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight leading-tight">พักเช็ก</span>
+          <span class="font-label-md text-label-md text-on-surface-variant font-semibold">(PakCheck)</span>
+        </div>
+        <span class="font-body-md text-[14px] text-on-surface-variant hidden lg:inline tracking-normal">
+          พัก 10 วิ เช็กให้ชัวร์ ก่อนโอนหรือกดลิงก์
+        </span>
+      </div>
+    </div>
+
+    <!-- Center Navigation Tabs (Rectangular / Rounded-lg) -->
+    <nav class="hidden xl:flex items-center gap-1.5 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant/30" data-active-classes="bg-primary-container text-on-primary rounded-lg font-bold shadow-sm">
+      <a class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest font-label-md text-label-md transition-all whitespace-nowrap" data-path="quick-scan" href="index.html">
+        <span class="material-symbols-outlined text-[20px]">search_check</span>
+        <span>หน้าแรก (ตรวจด่วน)</span>
+      </a>
+      <a aria-current="page" class="flex items-center gap-1.5 px-3 py-2 transition-all bg-primary-container text-on-primary rounded-lg font-bold shadow-sm font-label-md text-label-md whitespace-nowrap" data-path="safe-step" href="safe-step.html">
+        <span class="material-symbols-outlined text-[20px]">shield</span>
+        <span>ตัวช่วย SAFE STEP</span>
+      </a>
+      <a class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest font-label-md text-label-md transition-all whitespace-nowrap" data-path="support-radar" href="support-radar.html">
+        <span class="material-symbols-outlined text-[20px]">connect_without_contact</span>
+        <span>สะกิดครอบครัว &amp; เรดาร์</span>
+      </a>
+      <a class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest font-label-md text-label-md transition-all whitespace-nowrap" data-path="emergency-guide" href="emergency-guide.html">
+        <span class="material-symbols-outlined text-[20px]">menu_book</span>
+        <span>คู่มือกู้ชีพ ฉุกเฉิน 1441</span>
+      </a>
+    </nav>
+
+    <!-- Utility Controls & Emergency CTA (Right) -->
+    <div class="flex items-center gap-2 shrink-0">
+      <!-- Font Resizer: Rectangular buttons -->
+      <div class="hidden sm:flex items-center bg-surface-container rounded-lg p-1 gap-1 border border-outline-variant/30" title="ปรับขนาดตัวอักษร">
+        <button class="w-8 h-8 flex items-center justify-center rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" type="button">ก-</button>
+        <button class="w-8 h-8 flex items-center justify-center rounded font-label-md text-label-md font-bold text-on-surface bg-surface-container-lowest shadow-sm" type="button">ก</button>
+        <button class="w-8 h-8 flex items-center justify-center rounded font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-lowest hover:text-on-surface transition-colors" type="button">ก+</button>
+      </div>
+
+      <!-- Voice Reader Button: Rectangular -->
+      <button class="hidden md:flex items-center gap-1.5 px-3 py-2 bg-surface-container rounded-lg text-primary hover:bg-primary-fixed transition-colors font-label-md text-label-md border border-outline-variant/30 shrink-0" title="ฟังเสียงอ่านทั้งหน้า" type="button">
+        <span class="material-symbols-outlined text-[20px]">volume_up</span>
+        <span class="font-label-md text-label-md">ฟังเสียงอ่าน</span>
+      </button>
+
+      <!-- Emergency Hotline CTA: Rectangular -->
+      <a class="flex items-center gap-2 px-3 py-2 bg-error text-on-error rounded-lg hover:bg-tertiary-container shadow-[0_2px_8px_rgba(186,26,26,0.25)] transition-transform active:scale-95 shrink-0" href="tel:1441">
+        <div class="w-8 h-8 rounded bg-surface-container-lowest/20 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[20px] animate-pulse">phone_in_talk</span>
+        </div>
+        <div class="flex flex-col text-left justify-center leading-tight">
+          <span class="font-label-md text-[15px] font-bold leading-none">โทรสายด่วน AOC 1441</span>
+          <span class="font-body-md text-[13px] text-error-container leading-tight pt-0.5">โทรฟรี 24 ชม.</span>
+        </div>
+      </a>
+    </div>
+  </div></header>
+<div id="mobile-menu" class="hidden fixed top-20 left-0 right-0 z-40 bg-surface-container-lowest shadow-xl border-b border-outline-variant/30 xl:hidden">
+<nav class="max-w-[1280px] mx-auto px-gutter py-space-sm flex flex-col gap-1">
+<a href="index.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">search_check</span><span>หน้าแรก (ตรวจด่วน)</span></a>
+<a href="safe-step.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">shield</span><span>ตัวช่วย SAFE STEP</span></a>
+<a href="support-radar.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">family_restroom</span><span>สะกิดครอบครัว &amp; เรดาร์</span></a>
+<a href="emergency-guide.html" class="flex items-center gap-2 px-space-md py-3 rounded-xl hover:bg-surface-container font-label-lg text-label-lg transition-all"><span class="material-symbols-outlined text-[22px]">emergency_home</span><span>คู่มือกู้ชีพ ฉุกเฉิน 1441</span></a>
+</nav>
+</div><main class="w-full min-h-[calc(100vh-140px)] bg-surface pt-space-xl"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1280px] mx-auto px-gutter py-space-lg flex flex-col gap-space-lg">
+<!-- Top Breadcrumb & Live Mode Meta -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">security</span>
+<span class="font-label-md text-label-md">ระบบประเมินความปลอดภัยด่วน</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="font-label-md text-label-md text-primary font-bold">SAFE STEP วิเคราะห์สถานการณ์</span>
+</div>
+<div class="flex items-center gap-2 bg-secondary-container/40 px-space-md py-1.5 rounded-full text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-md text-label-md font-bold">โหมดคุ้มครองภัยไซเบอร์ผู้สูงอายุและครอบครัว</span>
+</div>
+</div>
+<!-- Scenario Header Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-primary text-on-primary font-label-md text-label-md rounded-full font-bold">คู่มือปลอดภัย 3 ขั้น</span>
+<span class="font-body-md text-body-md text-on-surface-variant">อัปเดตฐานข้อมูลมิจฉาชีพ 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary font-bold">
+            ตัวช่วยแนะนำทีละขั้น (SAFE STEP) — ตอบคำถาม 2-3 ข้อ เพื่อรับคำแนะนำทันที
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            ออกแบบให้อ่านง่าย ชัดเจน ไม่ต้องพิมพ์ เพียงกดเลือกสิ่งที่ตรงกับเหตุการณ์ที่คุณกำลังเผชิญ
+          </p>
+</div>
+<!-- Scenario Quick Tag -->
+<div class="shrink-0 flex items-center gap-space-xs bg-surface-container px-space-md py-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[28px]">image_search</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">สถานการณ์ปัจจุบัน</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">สายโทรศัพท์ต้องสงสัย</span>
+</div>
+</div>
+</div>
+<!-- Active Scenario Selector Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/15 text-tertiary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-bold tracking-wide uppercase">สถานการณ์จำลองที่พบบ่อยสูงสุด</span>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold">
+              มีคนโทรมาแจ้งว่า "พัสดุตกค้าง" หรือ "บัญชีธนาคารเกี่ยวพันคดียาเสพติด/ฟอกเงิน" และสั่งให้โอนเงินเพื่อตรวจสอบ
+            </p>
+</div>
+</div>
+<button class="shrink-0 px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+<span>เปลี่ยนสถานการณ์อื่น</span>
+</button>
+</div>
+<!-- Large Voice Bar Player -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-md transition-all" id="voice-bar-player">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<button aria-label="กดเพื่อฟังเสียงแนะนำ" class="w-14 h-14 rounded-full bg-primary text-on-primary hover:bg-primary-container flex items-center justify-center shadow-md active:scale-95 transition-transform shrink-0" id="voice-play-toggle" type="button">
+<span class="material-symbols-outlined text-[32px]" id="voice-play-icon">volume_up</span>
+</button>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary" id="voice-status-badge">พร้อมเล่นเสียง</span>
+<span class="text-on-surface-variant font-body-md text-body-md">• ภาษาไทย (เสียงนุ่มนวล ชัดถ้อยชัดคำ)</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-semibold">
+              🔊 กดฟังเสียงแนะนำวิธีปฏิบัติตามขั้นตอนนี้ (ความยาว 45 วินาที)
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<div class="flex items-end gap-1 h-7 px-3 py-1 bg-surface-container rounded-lg" id="equalizer-bars">
+<span class="w-1.5 bg-primary rounded-full h-3 transition-all"></span>
+<span class="w-1.5 bg-primary rounded-full h-6 transition-all"></span>
+<span class="w-1.5 bg-primary rounded-full h-4 transition-all"></span>
+<span class="w-1.5 bg-primary rounded-full h-5 transition-all"></span>
+<span class="w-1.5 bg-primary rounded-full h-2 transition-all"></span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant min-w-[55px] text-right" id="audio-timer">00:45</span>
+</div>
+</div>
+</section>
+<!-- Safe-Flow Stepper (Decision Tree) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b pb-space-sm border-outline-variant/30">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">psychology_alt</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">ตอบคำถาม 2 ขั้นตอนสั้นๆ เพื่อคัดกรองภัย</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">ขั้นตอนที่ 1 และ 2 จาก 2</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Step 1 Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between gap-space-md transition-shadow hover:shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-9 h-9 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-bold">1</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">คำถามที่ 1: ลักษณะคำพูดและการกดดัน</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold pt-1">
+              "คู่สนทนามีพฤติกรรมเร่งรัด ขู่ว่าจะดำเนินคดี แจ้งข้อหาร้ายแรง หรือสั่งห้ามบอกคนในบ้านหรือไม่?"
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              เช่น อ้างตัวเป็นตำรวจ ศาล ดีเอสไอ หรือพนักงานขนส่ง ขู่ว่าถ้าไม่ทำตามทันทีจะถูกจับกุมหรือยึดทรัพย์
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs" id="step1-group">
+<button aria-pressed="true" class="step1-btn flex items-center justify-center gap-2 min-h-[64px] px-space-md py-space-sm rounded-xl font-label-lg text-label-lg font-bold bg-error text-on-error shadow-sm transition-all active:scale-95" onclick="selectOption('step1', 'yes', this)" type="button">
+<span class="material-symbols-outlined text-[24px]">priority_high</span>
+<span>มีพฤติกรรมนี้ (กดเลือก)</span>
+</button>
+<button aria-pressed="false" class="step1-btn flex items-center justify-center gap-2 min-h-[64px] px-space-md py-space-sm rounded-xl font-label-lg text-label-lg font-bold bg-surface-container text-on-surface hover:bg-surface-variant transition-all active:scale-95" onclick="selectOption('step1', 'no', this)" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+<span>ไม่มีพฤติกรรมนี้</span>
+</button>
+</div>
+</div>
+<!-- Step 2 Card -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between gap-space-md transition-shadow hover:shadow-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-9 h-9 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-bold">2</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">คำถามที่ 2: การสั่งทำธุรกรรม &amp; ข้อมูลลับ</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface font-semibold pt-1">
+              "คู่สนทนาขอให้กดลิงก์แอด LINE, ติดตั้งแอป, แจ้งรหัส OTP หรือขอให้โอนเงินเข้าบัญชีบุคคลหรือไม่?"
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              เช่น ส่งลิงก์มาทาง SMS หรือบอกให้แอดไลน์ตราตำรวจ แล้วขอเลขบัตร รหัสแอปธนาคาร หรือให้โอนเงินพักไว้
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs" id="step2-group">
+<button aria-pressed="true" class="step2-btn flex items-center justify-center gap-2 min-h-[64px] px-space-md py-space-sm rounded-xl font-label-lg text-label-lg font-bold bg-error text-on-error shadow-sm transition-all active:scale-95" onclick="selectOption('step2', 'yes', this)" type="button">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span>ใช่ ขอรหัส/ขอเงิน (กดเลือก)</span>
+</button>
+<button aria-pressed="false" class="step2-btn flex items-center justify-center gap-2 min-h-[64px] px-space-md py-space-sm rounded-xl font-label-lg text-label-lg font-bold bg-surface-container text-on-surface hover:bg-surface-variant transition-all active:scale-95" onclick="selectOption('step2', 'no', this)" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+<span>ไม่ใช่ ไม่ได้ขอ</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Immediate Risk Assessment Banner -->
+<section class="bg-error text-on-error rounded-xl p-space-lg shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-lg" id="risk-banner">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest text-error flex items-center justify-center shrink-0 shadow-lg animate-bounce">
+<span class="material-symbols-outlined text-[40px]" style="font-variation-settings: 'FILL' 1;">dangerous</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 bg-surface-container-lowest text-error font-label-md text-label-md rounded font-bold uppercase">ผลลัพธ์จากการตอบคำถาม</span>
+<span class="font-body-md text-body-md opacity-90">ตรวจสอบตามฐานข้อมูล AOC</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-extrabold text-on-error tracking-tight">
+            ประเมินความเสี่ยง: ระดับสีแดง (อันตรายสูงสุด - มิจฉาชีพแน่นอน 100%)
+          </h3>
+<p class="font-body-lg text-body-lg text-error-container">
+            เจ้าหน้าที่ตำรวจและหน่วยงานรัฐตัวจริง <strong>ไม่มีนโยบายโทรขู่ทางโทรศัพท์ และไม่มีการให้โอนเงินเข้าบัญชีบุคคลเพื่อตรวจสอบเด็ดขาด</strong>
+</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row md:flex-col gap-space-xs w-full md:w-auto">
+<div class="px-space-md py-3 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+<span class="font-label-md text-label-md">พัก 10 วิ ก่อนทำรายการใดๆ</span>
+</div>
+<div class="px-space-md py-3 rounded-lg bg-surface-container-lowest/15 backdrop-blur-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+<span class="font-label-md text-label-md">คุ้มครองเงินในบัญชีของคุณ</span>
+</div>
+</div>
+</section>
+<!-- Side-by-Side Action Clarity Comparison (Do's vs Don'ts) -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- LEFT BOX: Do's (Green Emerald Background) -->
+<div class="bg-secondary-container/20 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-secondary text-on-secondary -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">สิ่งที่ควรทำทันที (Do's)</h3>
+</div>
+<span class="font-label-md text-label-md bg-on-secondary/20 px-3 py-1 rounded-full font-semibold">ข้อปฏิบัติปลอดภัย</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          ทำตาม 4 ข้อง่ายๆ นี้ เพื่อตัดโอกาสความเสียหายและปกป้องบัญชีธนาคาร:
+        </p>
+<ul class="flex flex-col gap-space-sm">
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold shrink-0 text-[18px]">1</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">วางสายโทรศัพท์ทันที</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                ไม่ต้องเกรงใจ ไม่ต้องชี้แจง หรือกลัวว่าจะมีความผิด กดปุ่มสีแดงวางสายได้เลยทันที
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold shrink-0 text-[18px]">2</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">บันทึกเบอร์โทรและเวลาที่โทรเข้ามา</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                จดหรือแคปหน้าจอเบอร์โทรศัพท์ไว้ เพื่อใช้แจ้งระงับเบอร์หรือส่งต่อให้ศูนย์สายด่วน AOC
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold shrink-0 text-[18px]">3</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">โทรตรวจสอบกับหน่วยงานจริงผ่านเบอร์ทางการ</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                หากกังวล ให้โทรสอบถามสถานีตำรวจใกล้บ้าน หรือโทรปรึกษาศูนย์ AOC 1441 โดยตรง
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold shrink-0 text-[18px]">4</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">ปรึกษาคนในครอบครัวหรือลูกหลานทันที</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                บอกเล่าเรื่องราวให้คนที่คุณไว้ใจรับฟังก่อนตัดสินใจทำธุรกรรมทางการเงินใดๆ เสมอ
+              </p>
+</div>
+</li>
+</ul>
+</div>
+<!-- RIGHT BOX: Don'ts (Red Crimson Background) -->
+<div class="bg-error-container/30 rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-error text-on-error -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[32px]">cancel</span>
+<h3 class="font-headline-sm text-headline-sm font-bold">สิ่งที่ห้ามทำเด็ดขาด (Don'ts)</h3>
+</div>
+<span class="font-label-md text-label-md bg-on-error/20 px-3 py-1 rounded-full font-semibold">ข้อห้ามระวังภัย</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          แม้คู่สนทนาจะอ้างตำแหน่งสูงหรือขู่ฟ้องร้อง ห้ามทำสิ่งเหล่านี้โดยเด็ดขาด:
+        </p>
+<ul class="flex flex-col gap-space-sm">
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center font-bold shrink-0 text-[18px]">1</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error font-bold">ห้ามโอนเงินเข้า "บัญชีตรวจสอบ" เด็ดขาด</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                หน่วยงานรัฐ ตำรวจ หรือศาลไทย ไม่มีนโยบายให้ประชาชนโอนเงินตรวจสอบความบริสุทธิ์
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center font-bold shrink-0 text-[18px]">2</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error font-bold">ห้ามบอกรหัส OTP หรือรหัสผ่านแอปธนาคาร</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                รหัสตัวเลข 6 หลักจาก SMS เป็นกุญแจเข้าถึงเงิน ห้ามบอกผู้อื่นไม่ว่ากรณีใดก็ตาม
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center font-bold shrink-0 text-[18px]">3</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error font-bold">ห้ามกดดาวน์โหลดแอป หรือเพิ่มเพื่อน LINE จากลิงก์</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                แอปควบคุมหน้าจอจะทำให้มิจฉาชีพโอนเงินออกจากมือถือคุณได้โดยไม่ต้องใช้รหัส
+              </p>
+</div>
+</li>
+<li class="p-space-md bg-surface-container-lowest rounded-xl flex items-start gap-space-sm shadow-sm transition-transform hover:translate-x-1">
+<span class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center font-bold shrink-0 text-[18px]">4</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-error font-bold">ห้ามเปิดกล้องวิดีโอคอลเพื่อสแกนใบหน้าตามคำสั่ง</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                มิจฉาชีพอาจบันทึกภาพใบหน้าของคุณเพื่อนำไปใช้ยืนยันตัวตนขโมยเงินออกจากบัญชี
+              </p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<!-- Visual Story / Supportive Info Card -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col md:flex-row items-center gap-space-lg">
+<div class="w-full md:w-1/3 h-56 rounded-xl overflow-hidden shadow-sm shrink-0">
+<img class="w-full h-full object-cover" data-alt="Warm and respectful photograph of an elderly Thai grandfather sitting together comfortably with his adult daughter and teenage grandson on a bright living room couch. The family is calmly looking at a smartphone screen together in soft morning sunlight. Warm blue and jade green accents reflect trustworthy family protection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcuCRVLFDNCT2y0o49r9VjRFVXP7IlC-72gvxdkFBkY3D5zzCoTQJvBikfBHfw4yZyk5JjE2bt-m87tkzcGrgzAZEJgEafgI_WgQ88hYiAFXTGvELfg8wVE9ITP4tWzCc3Bx7WtD4Sls665qZ6tszF-E4wfFs_A4ZA5K9DQreJtx-Hf8fBaI-FCjPEYYdsva-RNqL6uM9gb5V7Ucu0Rw5DqbSsG1vCPj4FRXwWrZC-">
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+          อบอุ่น มั่นใจ ก้าวผ่านภัยไซเบอร์ไปด้วยกัน
+        </span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+          จำกฎเหล็ก "ไม่เชื่อ ไม่รีบ ไม่โอน" พักก่อน 10 วินาที
+        </h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          การตกใจคือเครื่องมือหลักของมิจฉาชีพ เพียงแค่คุณตัดบทสนทนา หายใจลึกๆ แล้วบอกคนในบ้านหรือลูกหลาน ภัยร้ายจะหมดอำนาจทันที เงินของคุณยังปลอดภัยอยู่ในกระเป๋า
+        </p>
+</div>
+</section>
+<!-- Action Buttons Footer -->
+<section class="bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">ดำเนินการต่อที่คุณเลือกได้</span>
+<span class="font-body-md text-body-md text-on-surface-variant hidden sm:inline">ปุ่มขนาดใหญ่พิเศษ รองรับการสัมผัสชัดเจน</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Large Blue Button: Audio replay -->
+<button class="min-h-[64px] px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md active:scale-95 transition-all" id="replay-voice-btn" type="button">
+<span class="material-symbols-outlined text-[26px]">replay</span>
+<span>ฟังเสียงซ้ำอีกครั้ง (45 วินาที)</span>
+</button>
+<!-- Green Button: Ask family -->
+<a class="min-h-[64px] px-space-md py-space-sm rounded-xl bg-secondary text-on-secondary hover:bg-secondary/90 font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md active:scale-95 transition-all text-center" data-path="support-radar" href="support-radar.html">
+<span class="material-symbols-outlined text-[26px]">connect_without_contact</span>
+<span>ปรึกษาคนในครอบครัว (สะกิดเรดาร์)</span>
+</a>
+<!-- Red Button: AOC 1441 Hotline -->
+<a class="min-h-[64px] px-space-md py-space-sm rounded-xl bg-error text-on-error hover:bg-tertiary-container font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-xs shadow-md active:scale-95 transition-all text-center" href="tel:1441">
+<span class="material-symbols-outlined text-[26px] animate-pulse">call</span>
+<span>โทรแจ้งสายด่วน AOC 1441 ทันที</span>
+</a>
+</div>
+</section>
+</div>
+<!-- Inline Script for Interactive Stepper, Voice Player Simulation, and Status Changes -->
+<script>
+    (function() {
+      // Step selector logic
+      var stepState = {
+        step1: 'yes',
+        step2: 'yes'
+      };
+
+      window.selectOption = function(step, val, btn) {
+        stepState[step] = val;
+
+        var group = document.getElementById(step + '-group');
+        var buttons = group.querySelectorAll('button');
+
+        buttons.forEach(function(b) {
+          b.setAttribute('aria-pressed', 'false');
+          b.className = b.className.replace(/bg-error text-on-error|bg-secondary text-on-secondary/g, 'bg-surface-container text-on-surface');
+        });
+
+        btn.setAttribute('aria-pressed', 'true');
+        if (val === 'yes') {
+          btn.className = btn.className.replace('bg-surface-container text-on-surface', 'bg-error text-on-error');
+        } else {
+          btn.className = btn.className.replace('bg-surface-container text-on-surface', 'bg-secondary text-on-secondary');
+        }
+
+        updateRiskBanner();
+      };
+
+      function updateRiskBanner() {
+        var banner = document.getElementById('risk-banner');
+        if (!banner) return;
+
+        if (stepState.step1 === 'yes' || stepState.step2 === 'yes') {
+          banner.className = 'bg-error text-on-error rounded-xl p-space-lg shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-lg';
+          banner.querySelector('h3').textContent = 'ประเมินความเสี่ยง: ระดับสีแดง (อันตรายสูงสุด - มิจฉาชีพแน่นอน 100%)';
+        } else {
+          banner.className = 'bg-secondary text-on-secondary rounded-xl p-space-lg shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-lg';
+          banner.querySelector('h3').textContent = 'ประเมินความเสี่ยง: ระดับสีเขียว (ไม่พบสัญญาณอันตรายร้ายแรง)';
+        }
+      }
+
+      // Voice Audio Mock Player
+      var isPlaying = false;
+      var timerInterval = null;
+      var seconds = 45;
+
+      var playToggle = document.getElementById('voice-play-toggle');
+      var replayBtn = document.getElementById('replay-voice-btn');
+      var playIcon = document.getElementById('voice-play-icon');
+      var statusBadge = document.getElementById('voice-status-badge');
+      var timerSpan = document.getElementById('audio-timer');
+      var eqBars = document.getElementById('equalizer-bars');
+
+      function toggleAudio() {
+        if (!isPlaying) {
+          startAudio();
+        } else {
+          stopAudio();
+        }
+      }
+
+      function startAudio() {
+        isPlaying = true;
+        seconds = 45;
+        playIcon.textContent = 'pause';
+        statusBadge.textContent = 'กำลังอ่านออกเสียง...';
+        statusBadge.className = 'font-label-md text-label-md font-bold text-secondary animate-pulse';
+
+        if (eqBars) {
+          var spans = eqBars.querySelectorAll('span');
+          spans.forEach(function(s) {
+            s.classList.add('animate-bounce');
+          });
+        }
+
+        clearInterval(timerInterval);
+        timerInterval = setInterval(function() {
+          seconds--;
+          if (seconds < 10) {
+            timerSpan.textContent = '00:0' + seconds;
+          } else {
+            timerSpan.textContent = '00:' + seconds;
+          }
+
+          if (seconds <= 0) {
+            stopAudio();
+          }
+        }, 1000);
+      }
+
+      function stopAudio() {
+        isPlaying = false;
+        clearInterval(timerInterval);
+        playIcon.textContent = 'volume_up';
+        statusBadge.textContent = 'พร้อมเล่นเสียง';
+        statusBadge.className = 'font-label-md text-label-md font-bold text-primary';
+        timerSpan.textContent = '00:45';
+
+        if (eqBars) {
+          var spans = eqBars.querySelectorAll('span');
+          spans.forEach(function(s) {
+            s.classList.remove('animate-bounce');
+          });
+        }
+      }
+
+      if (playToggle) {
+        playToggle.addEventListener('click', toggleAudio);
+      }
+      if (replayBtn) {
+        replayBtn.addEventListener('click', function() {
+          startAudio();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-2px_12px_rgba(0,0,0,0.04)] pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[32px]">verified_user</span><span class="font-headline-sm text-headline-sm text-primary font-bold">พักเช็ก ปลอดภัย มั่นใจได้</span></div><p class="font-body-md text-body-md text-on-surface-variant">ออกแบบตามหลักสากลเพื่อผู้สูงวัยและครอบครัวไทย ไม่ต้องล็อกอิน ไม่จำประวัติ ปลอดภัยขั้นสูงสุดด้วยหลักการ Privacy by Design</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">lock_open_right</span><span class="font-label-md text-label-md text-secondary font-semibold">ไม่เก็บข้อมูลส่วนบุคคลและประวัติการตรวจสอบ</span></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">เครือข่ายความร่วมมือภาครัฐ</h3><p class="font-body-md text-body-md text-on-surface-variant">ระบบตรวจสอบและเชื่อมต่อมาตรการร่วมกับหน่วยงานเพื่อความปลอดภัยทางไซเบอร์แห่งชาติ</p><div class="flex flex-wrap items-center gap-space-sm pt-space-xs"><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">สำนักงานตำรวจแห่งชาติ</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">ศูนย์ AOC 1441</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">depa</div><div class="px-space-md py-2 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface-variant font-medium">สสส.</div></div></div><div class="flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">เบอร์ฉุกเฉินรับแจ้งเหตุ 24 ชม.</h3><div class="flex flex-col gap-space-xs"><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">สายด่วนภัยออนไลน์ AOC</span><span class="font-headline-sm text-headline-sm text-error font-bold">1441</span></div><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">ตำรวจสอบสวนกลาง (CIB)</span><span class="font-headline-sm text-headline-sm text-primary font-bold">1195</span></div><div class="p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><span class="font-body-md text-body-md text-on-surface font-medium">ศูนย์คุ้มครองผู้บริโภคทางการเงิน</span><span class="font-headline-sm text-headline-sm text-primary font-bold">1213</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm text-center md:text-left"><p class="font-body-md text-body-md text-on-surface-variant">© 2025 พักเช็ก (PakCheck) - แพลตฟอร์มคุ้มครองความปลอดภัยดิจิทัลเพื่อประชาชนไทย</p><div class="flex items-center gap-space-md font-body-md text-body-md text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">ข้อกำหนดการใช้งาน</a><a class="hover:text-primary transition-colors" href="#">นโยบายความเป็นส่วนตัว</a><a class="hover:text-primary transition-colors" href="#">ช่วยเหลือและแนะนำติชม</a></div></div></div></footer>
+
+</body></html>
